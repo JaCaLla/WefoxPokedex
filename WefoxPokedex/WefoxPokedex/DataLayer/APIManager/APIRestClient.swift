@@ -13,7 +13,7 @@ protocol RestClientProtocol:class {
 
     func perform(request urlRequest: URLRequestConvertible,
                  success succeed : @escaping ((PokemonAPI) -> Void),
-                 failure failed : @escaping ((ResponseCode) -> Void))
+                 failure failed : @escaping ((ResponseCodeAPI) -> Void))
 
 }
 
@@ -34,7 +34,7 @@ class APIRestClient: RestClientProtocol {
 
     func perform(request urlRequest: URLRequestConvertible,
                  success succeed : @escaping ((PokemonAPI) -> Void),
-                 failure failed : @escaping ((ResponseCode) -> Void)) {
+                 failure failed : @escaping ((ResponseCodeAPI) -> Void)) {
 
         printHeaderRequest(urlRequest)
         Alamofire.request(urlRequest).validate(statusCode: 200..<401).responseJSON { [weak self] response in
@@ -48,8 +48,8 @@ class APIRestClient: RestClientProtocol {
             case .failure(let error):
 
                 APIRestClient.printError(response: response)
-                ((error as NSError).domain == NSURLErrorDomain) ? failed(ResponseCode.connectivityError) :
-                    failed(ResponseCode.responseValidationFailed)
+                ((error as NSError).domain == NSURLErrorDomain) ? failed(ResponseCodeAPI.connectivityError) :
+                    failed(ResponseCodeAPI.responseValidationFailed)
             }
         }
     }
@@ -58,7 +58,7 @@ class APIRestClient: RestClientProtocol {
     fileprivate func processResponse( response: (DataResponse<Any>),
                                       urlRequest: URLRequestConvertible,
                                       success succeed : @escaping ((PokemonAPI) -> Void),
-                                      failure failed : @escaping ((ResponseCode) -> Void)) {
+                                      failure failed : @escaping ((ResponseCodeAPI) -> Void)) {
 
         if let resultValue = response.result.value as? [String: AnyObject] {
             do {
@@ -66,10 +66,10 @@ class APIRestClient: RestClientProtocol {
             let pokemonAPI = try JSONDecoder().decode(PokemonAPI.self, from: jsonData)
                 succeed(pokemonAPI)
             } catch {
-                failed(ResponseCode.badFormedJSONModel)
+                failed(ResponseCodeAPI.badFormedJSONModel)
             }
         } else {
-            failed(ResponseCode.missingResponseResultValue)
+            failed(ResponseCodeAPI.missingResponseResultValue)
         }
     }
 
@@ -98,13 +98,13 @@ class APIRestClient: RestClientProtocol {
     fileprivate func processSuccessResponseAferPerformingBuyRequest(_ response: (DataResponse<Any>),
                                                                     urlRequest: URLRequestConvertible,
                                                                     success succeed : @escaping ((Any) -> Void),
-                                                                    failure failed : @escaping ((ResponseCode) -> Void)) {
+                                                                    failure failed : @escaping ((ResponseCodeAPI) -> Void)) {
         self.printHeaderResponse(response)
         if let resultValue = response.result.value as? [String:AnyObject] {
             succeed(resultValue as Any)
         } else {
             APIRestClient.printParsingErrorIn(request: urlRequest)
-            failed(ResponseCode.badFormedJSONModel)
+            failed(ResponseCodeAPI.badFormedJSONModel)
         }
     }
 

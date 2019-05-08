@@ -9,7 +9,7 @@
 
 import Foundation
 
-enum ResponseCode : Int {
+enum ResponseCodeAPI : Int {
     case missingResponseResultValue = -5
     case badFormedJSONModel = -3
     case responseValidationFailed = -1

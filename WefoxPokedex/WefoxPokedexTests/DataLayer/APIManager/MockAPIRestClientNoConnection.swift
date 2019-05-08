@@ -18,11 +18,11 @@ class MockAPIRestClientNoConnection: RestClientProtocol {
     static let shared:MockAPIRestClientNoConnection = MockAPIRestClientNoConnection()
 
     // MARK: - Public attributes
-    var responseCode:ResponseCode = ResponseCode.connectivityError
+    var responseCode:ResponseCodeAPI = ResponseCodeAPI.connectivityError
 
     private init() { /*This prevents others from using the default '()' initializer for this class. */ }
 
-    func perform(request urlRequest: URLRequestConvertible, success succeed: @escaping ((PokemonAPI) -> Void), failure failed: @escaping ((ResponseCode) -> Void)) {
+    func perform(request urlRequest: URLRequestConvertible, success succeed: @escaping ((PokemonAPI) -> Void), failure failed: @escaping ((ResponseCodeAPI) -> Void)) {
         failed(responseCode)
     }
 }

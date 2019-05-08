@@ -66,11 +66,11 @@ class APIManager {
     }
 
     // MARK: - Service helpers
-    func getPersons(page: Int,
+    func getPokemon(id: Int,
                   onSucceed: @escaping ((PokemonAPI) -> Void),
-                  onFailed: @escaping ((ResponseCode) -> Void)) {
+                  onFailed: @escaping ((ResponseCodeAPI) -> Void)) {
 
-        self.injectedRestClient.perform(request: APIRouter.getPokemon(page),
+        self.injectedRestClient.perform(request: APIRouter.getPokemon(id),
                            success: { response in
                             onSucceed(response)
         }, failure: { responseCode in

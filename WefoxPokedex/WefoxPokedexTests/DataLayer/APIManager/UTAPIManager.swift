@@ -46,11 +46,24 @@ class UTAPIManager: XCTestCase {
     func testGetPokemon0() {
         let asyncExpectation = expectation(description: "\(#function)")
 
-        APIManager().getPersons(page: 0, onSucceed: { pokemonAPI in
+        APIManager().getPokemon(id: 0, onSucceed: { pokemonAPI in
             XCTFail()
             asyncExpectation.fulfill()
         }, onFailed: { responseCode in
-            XCTAssertEqual(responseCode, ResponseCode.responseValidationFailed)
+            XCTAssertEqual(responseCode, ResponseCodeAPI.responseValidationFailed)
+            asyncExpectation.fulfill()
+        })
+        self.waitForExpectations(timeout: self.timeout, handler: nil)
+    }
+
+    func testGetPokemonMinus1() {
+        let asyncExpectation = expectation(description: "\(#function)")
+
+        APIManager().getPokemon(id: -1, onSucceed: { pokemonAPI in
+            XCTFail()
+            asyncExpectation.fulfill()
+        }, onFailed: { responseCode in
+            XCTAssertEqual(responseCode, ResponseCodeAPI.responseValidationFailed)
             asyncExpectation.fulfill()
         })
         self.waitForExpectations(timeout: self.timeout, handler: nil)
@@ -59,12 +72,23 @@ class UTAPIManager: XCTestCase {
     func testGetPokemon1() {
         let asyncExpectation = expectation(description: "\(#function)")
 
-        APIManager().getPersons(page: 1, onSucceed: { pokemonAPI in
+        APIManager().getPokemon(id: 1, onSucceed: { pokemonAPI in
 
+            XCTAssertEqual(pokemonAPI.id,1)
             XCTAssertEqual(pokemonAPI.name,"bulbasaur")
             XCTAssertEqual(pokemonAPI.weight,69)
             XCTAssertEqual(pokemonAPI.height,7)
             XCTAssertEqual(pokemonAPI.sprites.frontDefault, "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")
+            XCTAssertEqual(pokemonAPI.baseExperience, 64)
+
+            guard pokemonAPI.types.count == 2 else { XCTFail()
+                asyncExpectation.fulfill()
+                return
+            }
+            XCTAssertEqual(pokemonAPI.types[0].slot, 2)
+            XCTAssertEqual(pokemonAPI.types[0].type.name, "poison")
+            XCTAssertEqual(pokemonAPI.types[1].slot, 1)
+            XCTAssertEqual(pokemonAPI.types[1].type.name, "grass")
 
             asyncExpectation.fulfill()
         }, onFailed: { responseCode in
@@ -78,13 +102,13 @@ class UTAPIManager: XCTestCase {
     func test_GetPokemonServerConnectionFailed() {
         let asyncExpectation = expectation(description: "\(#function)")
 
-        MockAPIRestClientNoConnection.shared.responseCode = ResponseCode.connectivityError
+        MockAPIRestClientNoConnection.shared.responseCode = ResponseCodeAPI.connectivityError
 
-        APIManager(restClient:MockAPIRestClientNoConnection.shared).getPersons(page: 1, onSucceed: { npsRestResponse in
+        APIManager(restClient:MockAPIRestClientNoConnection.shared).getPokemon(id: 1, onSucceed: { npsRestResponse in
             XCTFail()
             asyncExpectation.fulfill()
         }, onFailed: { responseCode in
-            XCTAssertEqual(responseCode, ResponseCode.connectivityError)
+            XCTAssertEqual(responseCode, ResponseCodeAPI.connectivityError)
             asyncExpectation.fulfill()
         })
 
@@ -94,22 +118,23 @@ class UTAPIManager: XCTestCase {
     func test_resetInjectedRestClient() {
         let asyncExpectation = expectation(description: "\(#function)")
 
-        MockAPIRestClientNoConnection.shared.responseCode = ResponseCode.connectivityError
+        MockAPIRestClientNoConnection.shared.responseCode = ResponseCodeAPI.connectivityError
 
         let apiManager = APIManager(restClient:MockAPIRestClientNoConnection.shared)
 
-        apiManager.getPersons(page: 1, onSucceed: { npsRestResponse in
+        apiManager.getPokemon(id: 1, onSucceed: { npsRestResponse in
             XCTFail()
             asyncExpectation.fulfill()
         }, onFailed: { responseCode in
-            XCTAssertEqual(responseCode, ResponseCode.connectivityError)
+            XCTAssertEqual(responseCode, ResponseCodeAPI.connectivityError)
             apiManager.reset() // mocked injected rest api client is replaced by the default injected one
-            apiManager.getPersons(page: 1, onSucceed: { pokemonAPI in
+            apiManager.getPokemon(id: 1, onSucceed: { pokemonAPI in
 
                 XCTAssertEqual(pokemonAPI.name,"bulbasaur")
                 XCTAssertEqual(pokemonAPI.weight,69)
                 XCTAssertEqual(pokemonAPI.height,7)
                 XCTAssertEqual(pokemonAPI.sprites.frontDefault, "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")
+                XCTAssertEqual(pokemonAPI.baseExperience, 64)
 
                 asyncExpectation.fulfill()
             }, onFailed: { responseCode in
