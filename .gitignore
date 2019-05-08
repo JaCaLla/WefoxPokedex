@@ -66,3 +66,128 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+WefoxPokedex/Pods/Manifest.lock
+WefoxPokedex/Pods/Alamofire/LICENSE
+WefoxPokedex/Pods/Alamofire/README.md
+WefoxPokedex/Pods/Alamofire/Source/AFError.swift
+WefoxPokedex/Pods/Alamofire/Source/Alamofire.swift
+WefoxPokedex/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+WefoxPokedex/Pods/Alamofire/Source/MultipartFormData.swift
+WefoxPokedex/Pods/Alamofire/Source/NetworkReachabilityManager.swift
+WefoxPokedex/Pods/Alamofire/Source/Notifications.swift
+WefoxPokedex/Pods/Alamofire/Source/ParameterEncoding.swift
+WefoxPokedex/Pods/Alamofire/Source/Request.swift
+WefoxPokedex/Pods/Alamofire/Source/Response.swift
+WefoxPokedex/Pods/Alamofire/Source/ResponseSerialization.swift
+WefoxPokedex/Pods/Alamofire/Source/Result.swift
+WefoxPokedex/Pods/Alamofire/Source/ServerTrustPolicy.swift
+WefoxPokedex/Pods/Alamofire/Source/SessionDelegate.swift
+WefoxPokedex/Pods/Alamofire/Source/SessionManager.swift
+WefoxPokedex/Pods/Alamofire/Source/TaskDelegate.swift
+WefoxPokedex/Pods/Alamofire/Source/Timeline.swift
+WefoxPokedex/Pods/Alamofire/Source/Validation.swift
+WefoxPokedex/Pods/CocoaLumberjack/LICENSE
+WefoxPokedex/Pods/CocoaLumberjack/README.md
+WefoxPokedex/Pods/CocoaLumberjack/Classes/CocoaLumberjack.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/CocoaLumberjack.swift
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDAbstractDatabaseLogger.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDAbstractDatabaseLogger.m
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDASLLogCapture.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDASLLogCapture.m
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDASLLogger.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDASLLogger.m
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDAssert.swift
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDAssertMacros.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDFileLogger+Internal.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDFileLogger.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDFileLogger.m
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDLegacyMacros.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDLog+LOGV.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDLog.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDLog.m
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDLoggerNames.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDLoggerNames.m
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDLogMacros.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDOSLogger.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDOSLogger.m
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDTTYLogger.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/DDTTYLogger.m
+WefoxPokedex/Pods/CocoaLumberjack/Classes/SwiftLogLevel.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/CLI/CLIColor.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/CLI/CLIColor.m
+WefoxPokedex/Pods/CocoaLumberjack/Classes/Extensions/DDContextFilterLogFormatter.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/Extensions/DDContextFilterLogFormatter.m
+WefoxPokedex/Pods/CocoaLumberjack/Classes/Extensions/DDDispatchQueueLogFormatter.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/Extensions/DDDispatchQueueLogFormatter.m
+WefoxPokedex/Pods/CocoaLumberjack/Classes/Extensions/DDFileLogger+Buffering.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/Extensions/DDFileLogger+Buffering.m
+WefoxPokedex/Pods/CocoaLumberjack/Classes/Extensions/DDMultiFormatter.h
+WefoxPokedex/Pods/CocoaLumberjack/Classes/Extensions/DDMultiFormatter.m
+WefoxPokedex/Pods/Pods.xcodeproj/project.pbxproj
+WefoxPokedex/Pods/R.swift/License
+WefoxPokedex/Pods/R.swift/rswift
+WefoxPokedex/Pods/R.swift.Library/License
+WefoxPokedex/Pods/R.swift.Library/Readme.md
+WefoxPokedex/Pods/R.swift.Library/Library/Core/ColorResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/Core/FileResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/Core/FontResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/Core/Identifier.swift
+WefoxPokedex/Pods/R.swift.Library/Library/Core/ImageResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/Core/NibResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/Core/ReuseIdentifierProtocol.swift
+WefoxPokedex/Pods/R.swift.Library/Library/Core/StoryboardResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/Core/StoryboardSegueIdentifierProtocol.swift
+WefoxPokedex/Pods/R.swift.Library/Library/Core/StoryboardViewControllerResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/Core/StringResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/Core/Validatable.swift
+WefoxPokedex/Pods/R.swift.Library/Library/Foundation/Bundle+FileResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/Foundation/Data+FileResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/UIKit/NibResource+UIKit.swift
+WefoxPokedex/Pods/R.swift.Library/Library/UIKit/StoryboardResourceWithInitialController+UIKit.swift
+WefoxPokedex/Pods/R.swift.Library/Library/UIKit/TypedStoryboardSegueInfo+UIStoryboardSegue.swift
+WefoxPokedex/Pods/R.swift.Library/Library/UIKit/UICollectionView+ReuseIdentifierProtocol.swift
+WefoxPokedex/Pods/R.swift.Library/Library/UIKit/UIColor+ColorResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/UIKit/UIFont+FontResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/UIKit/UIImage+ImageResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/UIKit/UINib+NibResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/UIKit/UIStoryboard+StoryboardResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/UIKit/UIStoryboard+StoryboardViewControllerResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/UIKit/UITableView+ReuseIdentifierProtocol.swift
+WefoxPokedex/Pods/R.swift.Library/Library/UIKit/UIViewController+NibResource.swift
+WefoxPokedex/Pods/R.swift.Library/Library/UIKit/UIViewController+StoryboardSegueIdentifierProtocol.swift
+WefoxPokedex/Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+WefoxPokedex/Pods/Target Support Files/Alamofire/Alamofire-Info.plist
+WefoxPokedex/Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+WefoxPokedex/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+WefoxPokedex/Pods/Target Support Files/Alamofire/Alamofire.modulemap
+WefoxPokedex/Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+WefoxPokedex/Pods/Target Support Files/CocoaLumberjack/CocoaLumberjack-dummy.m
+WefoxPokedex/Pods/Target Support Files/CocoaLumberjack/CocoaLumberjack-Info.plist
+WefoxPokedex/Pods/Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch
+WefoxPokedex/Pods/Target Support Files/CocoaLumberjack/CocoaLumberjack-umbrella.h
+WefoxPokedex/Pods/Target Support Files/CocoaLumberjack/CocoaLumberjack.modulemap
+WefoxPokedex/Pods/Target Support Files/CocoaLumberjack/CocoaLumberjack.xcconfig
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedex/Pods-WefoxPokedex-acknowledgements.markdown
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedex/Pods-WefoxPokedex-acknowledgements.plist
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedex/Pods-WefoxPokedex-dummy.m
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedex/Pods-WefoxPokedex-frameworks.sh
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedex/Pods-WefoxPokedex-Info.plist
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedex/Pods-WefoxPokedex-umbrella.h
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedex/Pods-WefoxPokedex.debug.xcconfig
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedex/Pods-WefoxPokedex.modulemap
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedex/Pods-WefoxPokedex.release.xcconfig
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedexTests/Pods-WefoxPokedexTests-acknowledgements.markdown
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedexTests/Pods-WefoxPokedexTests-acknowledgements.plist
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedexTests/Pods-WefoxPokedexTests-dummy.m
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedexTests/Pods-WefoxPokedexTests-Info.plist
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedexTests/Pods-WefoxPokedexTests-umbrella.h
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedexTests/Pods-WefoxPokedexTests.debug.xcconfig
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedexTests/Pods-WefoxPokedexTests.modulemap
+WefoxPokedex/Pods/Target Support Files/Pods-WefoxPokedexTests/Pods-WefoxPokedexTests.release.xcconfig
+WefoxPokedex/Pods/Target Support Files/R.swift/R.swift.xcconfig
+WefoxPokedex/Pods/Target Support Files/R.swift.Library/R.swift.Library-dummy.m
+WefoxPokedex/Pods/Target Support Files/R.swift.Library/R.swift.Library-Info.plist
+WefoxPokedex/Pods/Target Support Files/R.swift.Library/R.swift.Library-prefix.pch
+WefoxPokedex/Pods/Target Support Files/R.swift.Library/R.swift.Library-umbrella.h
+WefoxPokedex/Pods/Target Support Files/R.swift.Library/R.swift.Library.modulemap
+WefoxPokedex/Pods/Target Support Files/R.swift.Library/R.swift.Library.xcconfig
