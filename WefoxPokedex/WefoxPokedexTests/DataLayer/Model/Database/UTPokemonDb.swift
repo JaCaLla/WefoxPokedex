@@ -22,7 +22,7 @@ class UTPokemonDb: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
 
-        let pokemon = Pokemon(idRest: 666, name: "patata", order: 8, weight: 88, height: 77, frontDefaultUrlStr: "https://ss", types: ["uno","dos"])
+        let pokemon = Pokemon(idRest: 666, name: "patata", order: 8, weight: 88, height: 77, frontDefaultUrlStr: "https://ss",baseExperience:55, types: ["uno","dos"])
 
         let pokemonDb  = PokemonDb(pokemon: pokemon)
 
@@ -32,6 +32,7 @@ class UTPokemonDb: XCTestCase {
         XCTAssertEqual(pokemonDb.weight, 88)
         XCTAssertEqual(pokemonDb.height, 77)
         XCTAssertEqual(pokemonDb.frontDefaultUrlStr, "https://ss")
+        XCTAssertEqual(pokemonDb.baseExperience, 55)
         XCTAssertTrue( NSDate().timeIntervalSince1970 - pokemonDb.catched < 0.01 )
         XCTAssertEqual(pokemonDb.types, "uno,dos")
     }

@@ -18,6 +18,9 @@ target 'WefoxPokedex' do
   # Pods for Loging
   pod 'CocoaLumberjack/Swift', '~> 3.5.3'
 
+  # Pods for UI
+  pod 'SDWebImage', '~> 4.4.6'
+
   target 'WefoxPokedexTests' do
     inherit! :search_paths
     # Pods for testing

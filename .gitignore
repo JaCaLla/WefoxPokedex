@@ -629,3 +629,66 @@ WefoxPokedex/Pods/Target Support Files/RealmSwift/RealmSwift-prefix.pch
 WefoxPokedex/Pods/Target Support Files/RealmSwift/RealmSwift-umbrella.h
 WefoxPokedex/Pods/Target Support Files/RealmSwift/RealmSwift.modulemap
 WefoxPokedex/Pods/Target Support Files/RealmSwift/RealmSwift.xcconfig
+WefoxPokedex/Pods/SDWebImage/LICENSE
+WefoxPokedex/Pods/SDWebImage/README.md
+WefoxPokedex/Pods/SDWebImage/SDWebImage/NSButton+WebCache.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/NSButton+WebCache.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/NSImage+WebCache.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/NSImage+WebCache.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDAnimatedImageRep.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDAnimatedImageRep.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDImageCache.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDImageCache.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDImageCacheConfig.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDImageCacheConfig.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageCoder.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageCoder.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageCoderHelper.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageCoderHelper.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageCodersManager.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageCodersManager.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageCompat.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageFrame.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageFrame.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageGIFCoder.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageGIFCoder.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageImageIOCoder.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageImageIOCoder.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageManager.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageManager.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageOperation.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageTransition.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/SDWebImageTransition.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIButton+WebCache.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIButton+WebCache.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIImage+ForceDecode.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIImage+ForceDecode.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIImage+GIF.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIImage+GIF.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIImage+MemoryCacheCost.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIImage+MemoryCacheCost.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIView+WebCache.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIView+WebCache.m
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.h
+WefoxPokedex/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m
+WefoxPokedex/Pods/Target Support Files/SDWebImage/SDWebImage-dummy.m
+WefoxPokedex/Pods/Target Support Files/SDWebImage/SDWebImage-Info.plist
+WefoxPokedex/Pods/Target Support Files/SDWebImage/SDWebImage-prefix.pch
+WefoxPokedex/Pods/Target Support Files/SDWebImage/SDWebImage-umbrella.h
+WefoxPokedex/Pods/Target Support Files/SDWebImage/SDWebImage.modulemap
+WefoxPokedex/Pods/Target Support Files/SDWebImage/SDWebImage.xcconfig

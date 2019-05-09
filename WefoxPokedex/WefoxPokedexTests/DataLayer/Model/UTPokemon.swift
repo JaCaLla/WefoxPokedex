@@ -52,6 +52,7 @@ class UTPokemon: XCTestCase {
                                   weight: 88,
                                   height: 77,
                                   frontDefaultUrlStr: "https://ss",
+                                  baseExperience:45,
                                   types: ["uno","dos"])
         let pokemon = pokemonDb.pokemon
 
@@ -61,9 +62,21 @@ class UTPokemon: XCTestCase {
         XCTAssertEqual(pokemon.weight, 88)
         XCTAssertEqual(pokemon.height, 77)
         XCTAssertEqual(pokemon.frontDefaultUrlStr, "https://ss")
+        XCTAssertEqual(pokemon.baseExperience, 45)
         XCTAssertTrue( NSDate().timeIntervalSince1970 - pokemonDb.catched < 1 )
         XCTAssertEqual(pokemon.types, ["uno","dos"])
     }
 
+    func test_equatable() {
+
+        let pokemon1 = Pokemon(idRest: 666, name: "patata", order: 9, weight: 88, height: 77, frontDefaultUrlStr: "https://ss",baseExperience:55, types: ["uno","dos"])
+
+        let pokemon2 = Pokemon(idRest: 666, name: "patata", order: 9, weight: 88, height: 77, frontDefaultUrlStr: "https://ss",baseExperience:55, types: ["uno","dos"])
+        let pokemon3 = Pokemon(idRest: 6666, name: "patata", order: 9, weight: 88, height: 77, frontDefaultUrlStr: "https://ss",baseExperience:55, types: ["uno","dos"])
+
+        XCTAssertEqual(pokemon1, pokemon2)
+        XCTAssertNotEqual(pokemon2, pokemon3)
+
+    }
 
 }

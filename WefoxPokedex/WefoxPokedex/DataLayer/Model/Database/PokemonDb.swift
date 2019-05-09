@@ -18,7 +18,7 @@ class PokemonDb: Object {
     @objc dynamic var height:Int = -1
     @objc dynamic var frontDefaultUrlStr: String = ""
     @objc dynamic var catched:Double = NSDate().timeIntervalSince1970
-   // @objc dynamic var types:[String] = []
+    @objc dynamic var baseExperience:Int  = -1
     dynamic var types: String = ""
 
     var pokemon:Pokemon {
@@ -35,6 +35,7 @@ class PokemonDb: Object {
          height:Int,
          frontDefaultUrlStr: String,
          catched:Double = NSDate().timeIntervalSince1970,
+         baseExperience:Int,
          types:[String]) {
 
         self.init()
@@ -45,6 +46,7 @@ class PokemonDb: Object {
         self.height = height
         self.frontDefaultUrlStr = frontDefaultUrlStr
         self.catched = catched
+        self.baseExperience = baseExperience
         self.types = types.map { String(describing: $0) }.joined(separator: ",")
     }
 
@@ -56,6 +58,7 @@ class PokemonDb: Object {
                   height:pokemon.height,
                   frontDefaultUrlStr:pokemon.frontDefaultUrlStr,
                   catched:pokemon.catched ?? NSDate().timeIntervalSince1970,
+                  baseExperience:pokemon.baseExperience,
                   types:pokemon.types)
     }
 

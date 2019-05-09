@@ -18,6 +18,7 @@ struct Pokemon {
     var height:Int = -1
     var frontDefaultUrlStr: String = ""
     var catched:Double? = nil
+    var baseExperience:Int  = -1
     var types:[String] = []
 
     // MARK : - Constructors/Initializers
@@ -32,6 +33,7 @@ struct Pokemon {
          height:Int,
          frontDefaultUrlStr: String,
          catched:Double? = nil,
+         baseExperience:Int,
          types:[String] ) {
         
         self.idRest = idRest
@@ -41,6 +43,7 @@ struct Pokemon {
         self.height = height
         self.frontDefaultUrlStr = frontDefaultUrlStr
         self.catched = catched
+        self.baseExperience = baseExperience
         self.types = types
     }
 
@@ -52,6 +55,7 @@ struct Pokemon {
                   height:pokemonAPI.height,
                   frontDefaultUrlStr:pokemonAPI.sprites.frontDefault,
                   catched:nil,
+                  baseExperience: pokemonAPI.baseExperience,
                   types:pokemonAPI.types.map({ $0.type.name }) )
     }
 
@@ -63,7 +67,14 @@ struct Pokemon {
                   weight: pokemonDb.weight,
                   height: pokemonDb.height,
                   frontDefaultUrlStr: pokemonDb.frontDefaultUrlStr,
+                  baseExperience: pokemonDb.baseExperience,
                   types: pokemonDb.types.components(separatedBy: ",").compactMap { String($0) } )
     }
+}
 
+extension Pokemon:Equatable {
+    // MARK: - Equatable
+    static func == (lhs: Pokemon, rhs: Pokemon) -> Bool {
+       return lhs.idRest == rhs.idRest
+    }
 }

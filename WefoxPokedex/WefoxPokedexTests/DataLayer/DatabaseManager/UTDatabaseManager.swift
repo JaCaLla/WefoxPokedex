@@ -14,7 +14,7 @@ class UTDatabaseManager: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.ç
-        DatabaseManager.shared.reset()
+        DBManager.shared.reset()
     }
 
     override func tearDown() {
@@ -25,11 +25,11 @@ class UTDatabaseManager: XCTestCase {
 
         let asyncExpectation = expectation(description: "\(#function)")
 
-        let pokemon = Pokemon(idRest: 666, name: "patata", order: 9, weight: 88, height: 77, frontDefaultUrlStr: "https://ss", types: ["uno","dos"])
+        let pokemon = Pokemon(idRest: 666, name: "patata", order: 9, weight: 88, height: 77, frontDefaultUrlStr: "https://ss",baseExperience:55, types: ["uno","dos"])
         
-        XCTAssertFalse(DatabaseManager.shared.exists(pokemon: pokemon))
-        DatabaseManager.shared.create(pokemon: pokemon, completion: {
-            XCTAssertTrue(DatabaseManager.shared.exists(pokemon: pokemon))
+        XCTAssertFalse(DBManager.shared.exists(pokemon: pokemon))
+        DBManager.shared.create(pokemon: pokemon, completion: {
+            XCTAssertTrue(DBManager.shared.exists(pokemon: pokemon))
             asyncExpectation.fulfill()
         })
         self.waitForExpectations(timeout: self.timeout, handler: nil)
@@ -40,14 +40,14 @@ class UTDatabaseManager: XCTestCase {
 
         let asyncExpectation = expectation(description: "\(#function)")
 
-        let pokemon = Pokemon(idRest: 33, name: "3", order: 3, weight: 3, height: 3, frontDefaultUrlStr: "https://ss", types: ["uno","dos"])
+        let pokemon = Pokemon(idRest: 33, name: "3", order: 3, weight: 3, height: 3, frontDefaultUrlStr: "https://ss", baseExperience:55,types: ["uno","dos"])
 
-        DatabaseManager.shared.create(pokemon: pokemon, completion: {
-            let pokemon = Pokemon(idRest: 1, name: "1", order: 1, weight: 88, height: 77, frontDefaultUrlStr: "https://ss", types: ["uno","dos"])
-            DatabaseManager.shared.create(pokemon: pokemon, completion: {
-                let pokemon = Pokemon(idRest: 2, name: "2", order: 2, weight: 88, height: 77, frontDefaultUrlStr: "https://ss", types: ["uno","dos"])
-                DatabaseManager.shared.create(pokemon: pokemon, completion: {
-                    let pokemons = DatabaseManager.shared.getCatchedPockemons()
+        DBManager.shared.create(pokemon: pokemon, completion: {
+            let pokemon = Pokemon(idRest: 1, name: "1", order: 1, weight: 88, height: 77, frontDefaultUrlStr: "https://ss",baseExperience:55, types: ["uno","dos"])
+            DBManager.shared.create(pokemon: pokemon, completion: {
+                let pokemon = Pokemon(idRest: 2, name: "2", order: 2, weight: 88, height: 77, frontDefaultUrlStr: "https://ss",baseExperience:55, types: ["uno","dos"])
+                DBManager.shared.create(pokemon: pokemon, completion: {
+                    let pokemons = DBManager.shared.getCatchedPockemons()
                     XCTAssertEqual(pokemons.count, 3)
                     XCTAssertEqual(pokemons[0].order, 1)
                     XCTAssertEqual(pokemons[0].name, "1")
@@ -61,7 +61,6 @@ class UTDatabaseManager: XCTestCase {
         })
         self.waitForExpectations(timeout: self.timeout, handler: nil)
     }
-
 }
 
 

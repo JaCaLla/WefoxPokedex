@@ -22,9 +22,9 @@ extension Realm {
     }
 }
 
-class DatabaseManager {
+class DBManager {
 
-    static let shared = DatabaseManager()
+    static let shared = DBManager()
     var thread = Thread.current
     var realm: Realm!
 
@@ -83,7 +83,7 @@ class DatabaseManager {
     }
 }
 
-extension DatabaseManager: Resetable {
+extension DBManager: Resetable {
     func reset() {
         self.resetHandlerIfNecessary()
         do {

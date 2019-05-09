@@ -1,0 +1,37 @@
+"search_pokemon_title" = "Try a Pokemon numeric code:";
+"search_pokemon_button_title" = "Try for luck!";
+"search_pokemon_alert_title" = "Alert";
+"search_pokemon_alert_message" = "Pokemon code not found try a lower number...";
+"search_pokemon_alert_button" = "Ok";
+
+
+
+"catch_pokemon_title" = "Pokemon Detail";
+"catch_pokemon_attribute_name" = "Name";
+"catch_pokemon_attribute_catched" = "Catched";
+"catch_pokemon_attribute_weight" = "Weight";
+"catch_pokemon_attribute_height" = "Height";
+"catch_pokemon_attribute_base_experience" = "Base experience";
+"catch_pokemon_attribute_experience" = "Experience";
+"catch_pokemon_value_catched_not_catched" = "Not catched yet!!!";
+"catch_pokemon_button_catch" = "Catch it!";
+"catch_pokemon_button_leave" = "...or leave it";
+
+
+"person_list_title" = "People List";
+
+"person_list_detail" = "Person Detail";
+"person_detail_email" = "email";
+"person_detail_first" = "first";
+"person_detail_edit" = "Edit";
+"person_detail_save" = "Done";
+"person_detail_cancel" = "Cancel";
+"person_detail_back" = "< Back";
+"person_detail_delete" = "DELETE";
+"person_detail_picker_choose_image" = "Choose Image";
+"person_detail_picker_camera" = "Camera";
+"person_detail_picker_gallery" = "Gallery";
+"person_detail_picker_cancel" = "Cancel";
+"person_detail_picker_warning_image" = "Warning";
+"person_detail_picker_no_camera_image" = "You don't have camera";
+"person_detail_picker_ok_image" = "Ok";
