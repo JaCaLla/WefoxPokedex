@@ -7,8 +7,8 @@
 //
 
 import XCTest
-@testable import WefoxPokedex
 
+@testable import WefoxPokedex
 class UTPokemon: XCTestCase {
 
     override func setUp() {
@@ -24,6 +24,7 @@ class UTPokemon: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let pokemonAPI = PokemonAPI(id:666,
                                     name: "patata",
+                                    order: 22,
                                     weight: 88,
                                     height: 67,
                                     sprites: SpritesAPI(frontDefault: "url_string"),
@@ -34,6 +35,7 @@ class UTPokemon: XCTestCase {
 
         XCTAssertEqual(pokemon.idRest, 666)
         XCTAssertEqual(pokemon.name, "patata")
+        XCTAssertEqual(pokemon.order, 22)
         XCTAssertEqual(pokemon.weight, 88)
         XCTAssertEqual(pokemon.height, 67)
         XCTAssertEqual(pokemon.frontDefaultUrlStr, "url_string")
@@ -41,6 +43,27 @@ class UTPokemon: XCTestCase {
         XCTAssertEqual(pokemon.types, ["sss","ooo"])
     }
 
+    func test_initPokemonDb() {
+
+
+        let pokemonDb = PokemonDb(idRest: 666,
+                                  name: "patata",
+                                  order: 3,
+                                  weight: 88,
+                                  height: 77,
+                                  frontDefaultUrlStr: "https://ss",
+                                  types: ["uno","dos"])
+        let pokemon = pokemonDb.pokemon
+
+        XCTAssertEqual(pokemon.idRest, 666)
+        XCTAssertEqual(pokemon.name, "patata")
+        XCTAssertEqual(pokemon.order, 3)
+        XCTAssertEqual(pokemon.weight, 88)
+        XCTAssertEqual(pokemon.height, 77)
+        XCTAssertEqual(pokemon.frontDefaultUrlStr, "https://ss")
+        XCTAssertTrue( NSDate().timeIntervalSince1970 - pokemonDb.catched < 1 )
+        XCTAssertEqual(pokemon.types, ["uno","dos"])
+    }
 
 
 }

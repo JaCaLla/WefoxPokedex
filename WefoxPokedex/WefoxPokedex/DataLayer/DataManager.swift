@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum DataManagerResponse: Equatable {
+enum DataManagerResponse {
     case fetchedPokemon(Pokemon)
     case pokemonNotFound
     case networkError
@@ -16,16 +16,7 @@ enum DataManagerResponse: Equatable {
     init(responseCodeAPI:ResponseCodeAPI) {
         switch responseCodeAPI {
         case .responseValidationFailed: self = .pokemonNotFound
-        default:                          self = .networkError
-        }
-    }
-
-    static public func ==(lhs: DataManagerResponse, rhs: DataManagerResponse) -> Bool {
-        switch (lhs, rhs) {
-        case let (.fetchedPokemon(a),.fetchedPokemon(b)): return a.idRest == b.idRest
-        case (.pokemonNotFound,.pokemonNotFound): return true
-        case (.networkError,.networkError): return true
-        default: return false
+        default:                        self = .networkError
         }
     }
 }

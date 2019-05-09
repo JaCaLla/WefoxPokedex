@@ -27,6 +27,11 @@
 		5E34239222834EDC00D7DF2A /* UTPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E34239122834EDC00D7DF2A /* UTPokemon.swift */; };
 		5E342394228354A900D7DF2A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342393228354A900D7DF2A /* DataManager.swift */; };
 		5E34239622835A2500D7DF2A /* UTDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E34239522835A2500D7DF2A /* UTDataManager.swift */; };
+		5E34239A22836A9700D7DF2A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E34239922836A9700D7DF2A /* DatabaseManager.swift */; };
+		5E34239C22836CC200D7DF2A /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E34239B22836CC200D7DF2A /* RealmConfig.swift */; };
+		5E34239F22836DBA00D7DF2A /* PokemonDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E34239E22836DBA00D7DF2A /* PokemonDb.swift */; };
+		5E3423A2228370D800D7DF2A /* UTPokemonDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3423A1228370D800D7DF2A /* UTPokemonDb.swift */; };
+		5E3423A5228373AA00D7DF2A /* UTDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3423A4228373AA00D7DF2A /* UTDatabaseManager.swift */; };
 		C5132C0D1C78029F47DF9F11 /* Pods_WefoxPokedexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6C47A5E3D3C85BC887B437 /* Pods_WefoxPokedexTests.framework */; };
 		D9D93985C09F9DE21FFC2FED /* Pods_WefoxPokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F31712E70DC397DFFBAA3A6 /* Pods_WefoxPokedex.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +73,11 @@
 		5E34239122834EDC00D7DF2A /* UTPokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTPokemon.swift; sourceTree = "<group>"; };
 		5E342393228354A900D7DF2A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5E34239522835A2500D7DF2A /* UTDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTDataManager.swift; sourceTree = "<group>"; };
+		5E34239922836A9700D7DF2A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		5E34239B22836CC200D7DF2A /* RealmConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
+		5E34239E22836DBA00D7DF2A /* PokemonDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDb.swift; sourceTree = "<group>"; };
+		5E3423A1228370D800D7DF2A /* UTPokemonDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTPokemonDb.swift; sourceTree = "<group>"; };
+		5E3423A4228373AA00D7DF2A /* UTDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTDatabaseManager.swift; sourceTree = "<group>"; };
 		6F31712E70DC397DFFBAA3A6 /* Pods_WefoxPokedex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WefoxPokedex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A440F61AEBC11F5E2DBBD5F /* Pods-WefoxPokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WefoxPokedex.release.xcconfig"; path = "Target Support Files/Pods-WefoxPokedex/Pods-WefoxPokedex.release.xcconfig"; sourceTree = "<group>"; };
 		9C51CCCC93FD88C926E91877 /* Pods-WefoxPokedexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WefoxPokedexTests.debug.xcconfig"; path = "Target Support Files/Pods-WefoxPokedexTests/Pods-WefoxPokedexTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,9 +185,10 @@
 		5E34236722831F5A00D7DF2A /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
-				5E34237422831FC200D7DF2A /* APIManager */,
-				5E34236822831F7000D7DF2A /* Model */,
 				5E342393228354A900D7DF2A /* DataManager.swift */,
+				5E34237422831FC200D7DF2A /* APIManager */,
+				5E34239722836A1600D7DF2A /* DatabaseManager */,
+				5E34236822831F7000D7DF2A /* Model */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 		5E34236822831F7000D7DF2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E34239D22836D7F00D7DF2A /* Database */,
 				5E34238E22834BBC00D7DF2A /* Pokemon.swift */,
 				5E34236922831FA500D7DF2A /* API */,
 			);
@@ -233,6 +245,7 @@
 			children = (
 				5E34239022834E5500D7DF2A /* Model */,
 				5E3423802283207B00D7DF2A /* APIManager */,
+				5E3423A32283738400D7DF2A /* DatabaseManager */,
 				5E34239522835A2500D7DF2A /* UTDataManager.swift */,
 			);
 			path = DataLayer;
@@ -250,9 +263,43 @@
 		5E34239022834E5500D7DF2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E3423A02283708900D7DF2A /* Database */,
 				5E34239122834EDC00D7DF2A /* UTPokemon.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5E34239722836A1600D7DF2A /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				5E34239922836A9700D7DF2A /* DatabaseManager.swift */,
+				5E34239B22836CC200D7DF2A /* RealmConfig.swift */,
+			);
+			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
+		5E34239D22836D7F00D7DF2A /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				5E34239E22836DBA00D7DF2A /* PokemonDb.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		5E3423A02283708900D7DF2A /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				5E3423A1228370D800D7DF2A /* UTPokemonDb.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		5E3423A32283738400D7DF2A /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				5E3423A4228373AA00D7DF2A /* UTDatabaseManager.swift */,
+			);
+			path = DatabaseManager;
 			sourceTree = "<group>";
 		};
 		7B2C5858BF1B66D07E31C9DA /* Pods */ = {
@@ -401,6 +448,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -409,6 +458,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -466,11 +517,14 @@
 			files = (
 				5E34234322831A1300D7DF2A /* ViewController.swift in Sources */,
 				5E34238822833A5E00D7DF2A /* SpritesAPI.swift in Sources */,
+				5E34239C22836CC200D7DF2A /* RealmConfig.swift in Sources */,
 				5E34234122831A1300D7DF2A /* AppDelegate.swift in Sources */,
 				5E34237A22831FD600D7DF2A /* APIManager.swift in Sources */,
 				5E34237E2283203500D7DF2A /* Resetable.swift in Sources */,
 				5E34238F22834BBC00D7DF2A /* Pokemon.swift in Sources */,
+				5E34239A22836A9700D7DF2A /* DatabaseManager.swift in Sources */,
 				5E34237922831FD600D7DF2A /* ResponseCodeAPI.swift in Sources */,
+				5E34239F22836DBA00D7DF2A /* PokemonDb.swift in Sources */,
 				5E34238C2283489E00D7DF2A /* TypeAPI.swift in Sources */,
 				5E34238A2283440E00D7DF2A /* TypesAPI.swift in Sources */,
 				5E34236622831E7C00D7DF2A /* R.generated.swift in Sources */,
@@ -487,7 +541,9 @@
 				5E34239622835A2500D7DF2A /* UTDataManager.swift in Sources */,
 				5E342386228337B000D7DF2A /* MockAPIRestClientNoConnection.swift in Sources */,
 				5E3423822283208D00D7DF2A /* UTAPIManager.swift in Sources */,
+				5E3423A2228370D800D7DF2A /* UTPokemonDb.swift in Sources */,
 				5E34239222834EDC00D7DF2A /* UTPokemon.swift in Sources */,
+				5E3423A5228373AA00D7DF2A /* UTDatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -75,10 +75,7 @@ class UTDataManager: XCTestCase {
                 XCTFail()
             }
         }
-
         self.waitForExpectations(timeout: self.timeout, handler: nil)
-
-
     }
 
 

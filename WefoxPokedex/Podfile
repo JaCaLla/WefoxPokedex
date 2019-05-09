@@ -7,13 +7,16 @@ target 'WefoxPokedex' do
 
   # Pods for WefoxPokedex
     # Pods for wfx
-  pod 'R.swift'
+  pod 'R.swift', '~> 5.0.3'
 
   # Pods for Networking
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 4.8.2'
+
+  # Data Persistance
+  pod 'RealmSwift', '~> 3.15.0'
 
   # Pods for Loging
-  pod 'CocoaLumberjack/Swift'
+  pod 'CocoaLumberjack/Swift', '~> 3.5.3'
 
   target 'WefoxPokedexTests' do
     inherit! :search_paths

@@ -12,6 +12,7 @@ import UIKit
 struct PokemonAPI {
     var id:Int              = -2
     var name:String         = ""
+    var order:Int           = -1
     var weight:Int          = -1
     var height:Int          = -1
     var sprites:SpritesAPI  = SpritesAPI()
@@ -23,6 +24,7 @@ extension PokemonAPI:Decodable {
     enum PokemonAPIKeys: String, CodingKey {
         case id             = "id"
         case name           = "name"
+        case order          = "order"
         case weight         = "weight"
         case height         = "height"
         case sprites        = "sprites"
@@ -34,6 +36,7 @@ extension PokemonAPI:Decodable {
         let container = try decoder.container(keyedBy: PokemonAPIKeys.self)
         let id = try container.decode(Int.self, forKey: .id)
         let name = try container.decode(String.self, forKey: .name)
+        let order = try container.decode(Int.self, forKey: .order)
         let weight = try container.decode(Int.self, forKey: .weight)
         let height = try container.decode(Int.self , forKey: .height)
         let sprites = try container.decode(SpritesAPI.self, forKey: .sprites)
@@ -42,6 +45,7 @@ extension PokemonAPI:Decodable {
 
         self.init(id:id,
                   name: name,
+                  order: order,
                   weight: weight,
                   height:height,
                   sprites:sprites,
