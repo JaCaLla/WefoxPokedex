@@ -1,8 +1,8 @@
 //
 //  StringExtension.swift
-//  UDManager
+//  WefoxPokedex
 //
-//  Created by Javier Calatrava Llaveria on 18/03/2019.
+//  Created by Javier Calatrava Llaveria on 10/05/2019.
 //  Copyright © 2019 Javier Calatrava Llaveria. All rights reserved.
 //
 

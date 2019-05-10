@@ -1,9 +1,9 @@
 //
 //  AppColors.swift
-//  wgs
+//  WefoxPokedex
 //
-//  Created by Alejandro Fornés Gandía on 02/02/2017.
-//  Copyright © 2017 08APO0516ja. All rights reserved.
+//  Created by Javier Calatrava Llaveria on 09/05/2019.
+//  Copyright © 2019 Javier Calatrava Llaveria. All rights reserved.
 //
 
 import Foundation
@@ -23,21 +23,40 @@ struct AppColors {
         static let blue = UIColor(rgbaValue: 0x007AFFFF)
         static let red = UIColor(rgbaValue: 0xff0000ff)
         static let grey = UIColor(rgbaValue: 0x888888ff)
+        static let lightgrey = UIColor(rgbaValue: 0xEEEEEEff)
     }
 
     // MARK: - PersonsList
     struct SearchPokemon {
-        static let background       = AppColors.Interface.white
-        static let titleFontColor   = AppColors.Interface.grey
-        static let textInputColor   = AppColors.Interface.black
+        static let background               = AppColors.Interface.lightgrey
+        static let titleFontColor           = AppColors.Interface.black
+        static let textInputColor           = AppColors.Interface.black
         static let buttonBackgroundColor    = AppColors.Interface.red
+        static let fontColor                = AppColors.Interface.white
     }
 
-    // MARK: - PersonDetail
-    struct PersonDetail {
-        static let fontColor                = AppColors.Interface.white
-        static let background               = AppColors.Interface.black
+    // MARK: - CatchPokemon
+    struct CatchPokemon {
+        static let background               = AppColors.Interface.lightgrey
+        static let nameFontColor            = AppColors.Interface.black
+        static let valueFontColor           = AppColors.Interface.black
         static let buttonBackgroundColor    = AppColors.Interface.red
+        static let buttonFontdColor         = AppColors.Interface.white
+    }
+
+    // MARK: - CatchPokemon
+    struct CatchedDetail {
+        static let background               = AppColors.Interface.lightgrey
+        static let cellBackground           = AppColors.Interface.white
+        static let nameFontColor            = AppColors.Interface.black
+        static let valueFontColor           = AppColors.Interface.black
+        static let buttonBackgroundColor    = AppColors.Interface.red
+        static let buttonFontdColor         = AppColors.Interface.white
+    }
+
+    // MARK: - CatchedList
+    struct CatchedList {
+        static let nameFontColor            = AppColors.Interface.black
     }
 }
 

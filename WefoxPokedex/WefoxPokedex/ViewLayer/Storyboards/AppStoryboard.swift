@@ -1,7 +1,9 @@
 //
 //  AppStoryboards.swift
-//  MVVMRedux
+//  WefoxPokedex
 //
+//  Created by Javier Calatrava Llaveria on 10/05/2019.
+//  Copyright © 2019 Javier Calatrava Llaveria. All rights reserved.
 //
 import Foundation
 import UIKit
@@ -41,12 +43,10 @@ extension UIViewController {
 
     // Not using static as it wont be possible to override to provide custom storyboardID then
     class var storyboardID : String {
-
         return "\(self)"
     }
 
     static func instantiate(fromAppStoryboard appStoryboard: AppStoryboard) -> Self {
-
         return appStoryboard.viewController(viewControllerClass: self)
     }
 }

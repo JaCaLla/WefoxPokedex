@@ -1,9 +1,9 @@
 //
 //  AppFonts.swift
-//  wgs
+//  WefoxPokedex
 //
-//  Created by 08APO0516 on 06/02/2017.
-//  Copyright © 2017 08APO0516ja. All rights reserved.
+//  Created by Javier Calatrava Llaveria on 10/05/2019.
+//  Copyright © 2019 Javier Calatrava Llaveria. All rights reserved.
 //
 
 import Foundation
@@ -11,15 +11,28 @@ import UIKit
 
 struct AppFonts {
 
-    struct PersonsList {
+    struct SearchPokemon {
+        static let valueFont      = TextStyle.h18Bold.font
+        static let labelFont      = TextStyle.h15LightItalic.font
+        static let buttonFont     = TextStyle.h20Bold.font
         static let firstFont      = TextStyle.h20Bold.font
         static let emailFont      = TextStyle.h15Light.font
     }
 
-    struct PersonDetail {
-        static let valueFont      = TextStyle.h18Bold.font
-        static let labelFont      = TextStyle.h15LightItalic.font
+    struct CatchPokemon {
+        static let nameFont      = TextStyle.h15LightItalic.font
+        static let valueFont      = TextStyle.h18Medium.font
         static let buttonFont     = TextStyle.h20Bold.font
+    }
+
+    struct CatchedDetail {
+        static let nameFont      = TextStyle.h15LightItalic.font
+        static let valueFont      = TextStyle.h18Medium.font
+        static let buttonFont     = TextStyle.h20Bold.font
+    }
+
+    struct CatchedList {
+        static let nameFont      = TextStyle.h10Book.font
     }
 }
 

@@ -1,10 +1,12 @@
-"search_pokemon_title" = "Try a Pokemon numeric code:";
+"tab_catched" = "Catch";
+"tab_backpack" = "Backpack";
+
+"search_pokemon_title" = "PokedexTest";
+"search_pokemon_label" = "Try a Pokemon numeric code:";
 "search_pokemon_button_title" = "Try for luck!";
 "search_pokemon_alert_title" = "Alert";
 "search_pokemon_alert_message" = "Pokemon code not found try a lower number...";
 "search_pokemon_alert_button" = "Ok";
-
-
 
 "catch_pokemon_title" = "Pokemon Detail";
 "catch_pokemon_attribute_name" = "Name";
@@ -17,6 +19,7 @@
 "catch_pokemon_value_catched_not_catched" = "Not catched yet!!!";
 "catch_pokemon_button_catch" = "Catch it!";
 "catch_pokemon_button_leave" = "...or leave it";
+
 
 
 "person_list_title" = "People List";

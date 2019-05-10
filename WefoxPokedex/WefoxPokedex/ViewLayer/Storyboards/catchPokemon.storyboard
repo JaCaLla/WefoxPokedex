@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ctk-G9-adm">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGH-03-Tjx" customClass="InputCodeView" customModule="WefoxPokedex" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="298" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="188.5" width="414" height="250"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bvP-6a-UmP">
-                                        <rect key="frame" x="20" y="135" width="374" height="30"/>
+                                        <rect key="frame" x="20" y="110" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -33,8 +33,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piE-OQ-22Z">
-                                        <rect key="frame" x="20" y="230" width="374" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piE-OQ-22Z">
+                                        <rect key="frame" x="20" y="180" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="eBu-WN-e1j"/>
                                         </constraints>
@@ -47,7 +47,7 @@
                                     <constraint firstItem="bvP-6a-UmP" firstAttribute="centerY" secondItem="EGH-03-Tjx" secondAttribute="centerY" id="5mZ-cs-Zhs"/>
                                     <constraint firstItem="piE-OQ-22Z" firstAttribute="trailing" secondItem="bvP-6a-UmP" secondAttribute="trailing" id="BWh-nD-b5g"/>
                                     <constraint firstAttribute="trailing" secondItem="bvP-6a-UmP" secondAttribute="trailing" constant="20" id="Gkz-mL-yVT"/>
-                                    <constraint firstAttribute="height" constant="300" id="J4A-BC-yyB"/>
+                                    <constraint firstAttribute="height" constant="250" id="J4A-BC-yyB"/>
                                     <constraint firstItem="bDk-4J-I16" firstAttribute="leading" secondItem="EGH-03-Tjx" secondAttribute="leading" constant="20" id="RJU-tv-G44"/>
                                     <constraint firstItem="piE-OQ-22Z" firstAttribute="leading" secondItem="bvP-6a-UmP" secondAttribute="leading" id="baB-mt-kq7"/>
                                     <constraint firstItem="bDk-4J-I16" firstAttribute="top" secondItem="EGH-03-Tjx" secondAttribute="top" constant="20" id="hvI-YW-vuo"/>
@@ -70,7 +70,7 @@
                             <constraint firstItem="rsy-jz-JbS" firstAttribute="centerX" secondItem="rXs-ug-rfa" secondAttribute="centerX" id="5PJ-PG-sxB"/>
                             <constraint firstItem="EGH-03-Tjx" firstAttribute="trailing" secondItem="XYb-OP-evJ" secondAttribute="trailing" id="jpc-Xu-L2A"/>
                             <constraint firstItem="EGH-03-Tjx" firstAttribute="leading" secondItem="XYb-OP-evJ" secondAttribute="leading" id="kYM-xv-ZDe"/>
-                            <constraint firstItem="EGH-03-Tjx" firstAttribute="centerY" secondItem="rXs-ug-rfa" secondAttribute="centerY" id="mxj-uN-WTI"/>
+                            <constraint firstItem="EGH-03-Tjx" firstAttribute="centerY" secondItem="rXs-ug-rfa" secondAttribute="centerY" multiplier="0.7" id="mxj-uN-WTI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XYb-OP-evJ"/>
                     </view>
@@ -92,21 +92,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oyy-wu-tr1" customClass="PokemonDetailView" customModule="WefoxPokedex" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="618"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="738"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImagePokemonTVC" rowHeight="220" id="mOE-Us-0Zo" customClass="ImagePokemonTVC" customModule="WefoxPokedex" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="220"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImagePokemonTVC" rowHeight="150" id="mOE-Us-0Zo" customClass="ImagePokemonTVC" customModule="WefoxPokedex" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mOE-Us-0Zo" id="hKR-5J-ykj">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="219.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mOE-Us-0Zo" id="hKR-5J-ykj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ijc-gs-CDY">
-                                                    <rect key="frame" x="107" y="10.5" width="200" height="200"/>
+                                                    <rect key="frame" x="142.5" y="10" width="129.5" height="129.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="8aN-gX-xdg"/>
-                                                        <constraint firstAttribute="height" constant="200" id="c1i-Hu-a0h"/>
+                                                        <constraint firstAttribute="width" constant="129.5" id="VUm-ol-cqt"/>
+                                                        <constraint firstAttribute="height" constant="129.5" id="ne3-zG-sqs"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -120,21 +120,21 @@
                                             <outlet property="imgFrontPokemon" destination="ijc-gs-CDY" id="Q0F-IE-fwE"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttributePokemonTVC" rowHeight="100" id="qHM-iI-Zvb" customClass="AttributePokemonTVC" customModule="WefoxPokedex" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="248" width="414" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttributePokemonTVC" rowHeight="80" id="qHM-iI-Zvb" customClass="AttributePokemonTVC" customModule="WefoxPokedex" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="178" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qHM-iI-Zvb" id="5Gi-Ab-VMX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPx-LL-qgs">
-                                                    <rect key="frame" x="40" y="21" width="334" height="21"/>
+                                                    <rect key="frame" x="30" y="11" width="354" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axe-Hp-Glc">
-                                                    <rect key="frame" x="40" y="52" width="334" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axe-Hp-Glc">
+                                                    <rect key="frame" x="30" y="48" width="354" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -142,12 +142,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="axe-Hp-Glc" firstAttribute="trailing" secondItem="pPx-LL-qgs" secondAttribute="trailing" id="9bR-YO-EIU"/>
-                                                <constraint firstItem="pPx-LL-qgs" firstAttribute="top" secondItem="5Gi-Ab-VMX" secondAttribute="topMargin" constant="10" id="BV3-LL-SKD"/>
-                                                <constraint firstItem="axe-Hp-Glc" firstAttribute="top" secondItem="pPx-LL-qgs" secondAttribute="bottom" constant="10" id="DTf-2M-HuA"/>
-                                                <constraint firstItem="pPx-LL-qgs" firstAttribute="leading" secondItem="5Gi-Ab-VMX" secondAttribute="leadingMargin" constant="20" id="Pjg-h8-eKt"/>
+                                                <constraint firstItem="pPx-LL-qgs" firstAttribute="top" secondItem="5Gi-Ab-VMX" secondAttribute="topMargin" id="BV3-LL-SKD"/>
+                                                <constraint firstItem="pPx-LL-qgs" firstAttribute="leading" secondItem="5Gi-Ab-VMX" secondAttribute="leadingMargin" constant="10" id="Pjg-h8-eKt"/>
                                                 <constraint firstItem="axe-Hp-Glc" firstAttribute="leading" secondItem="pPx-LL-qgs" secondAttribute="leading" id="eSM-KA-cPK"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="pPx-LL-qgs" secondAttribute="trailing" constant="20" id="hKo-fM-VVb"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="axe-Hp-Glc" secondAttribute="bottom" constant="16" id="k3L-yO-GcC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pPx-LL-qgs" secondAttribute="trailing" constant="10" id="hKo-fM-VVb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="axe-Hp-Glc" secondAttribute="bottom" id="k3L-yO-GcC"/>
+                                                <constraint firstItem="axe-Hp-Glc" firstAttribute="top" secondItem="pPx-LL-qgs" secondAttribute="bottom" constant="5" id="x6J-vh-SRh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -158,10 +158,10 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gC3-Em-8pF" customClass="CatchActionView" customModule="WefoxPokedex" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="662" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5J6-D0-96p">
-                                        <rect key="frame" x="20" y="75" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="15" width="374" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99M-Jn-9ap">
                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
@@ -188,7 +188,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="5J6-D0-96p" firstAttribute="centerY" secondItem="gC3-Em-8pF" secondAttribute="centerY" id="DpI-4L-idC"/>
-                                    <constraint firstAttribute="height" constant="200" id="Q7L-nv-wFc"/>
+                                    <constraint firstAttribute="height" constant="80" id="Q7L-nv-wFc"/>
                                     <constraint firstItem="5J6-D0-96p" firstAttribute="leading" secondItem="gC3-Em-8pF" secondAttribute="leading" constant="20" id="W3I-Mp-jTT"/>
                                     <constraint firstAttribute="trailing" secondItem="5J6-D0-96p" secondAttribute="trailing" constant="20" id="wAK-Wn-Hop"/>
                                 </constraints>

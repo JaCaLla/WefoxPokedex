@@ -13,6 +13,7 @@ class CatchedPokemonCVC: UICollectionViewCell {
     // MARK: - IBOutlet
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var imgFrontPokemon: UIImageView!
+    @IBOutlet weak var svwRecipe: UIView!
 
     // MARK: - Private attributes
     private var pokemon:Pokemon = Pokemon()
@@ -33,19 +34,27 @@ class CatchedPokemonCVC: UICollectionViewCell {
 
     // MARK: - Private/Internal
     func setupView() {
+        self.svwRecipe.dropShadow()
+        self.svwRecipe.backgroundColor = AppColors.CatchedDetail.cellBackground
+        self.svwRecipe.layer.cornerRadius = 10.0
+        self.svwRecipe.layer.borderWidth = 1.0
 
+        lblTitle.font = AppFonts.CatchedList.nameFont
+        lblTitle.textColor = AppColors.CatchedList.nameFontColor
+        lblTitle.textAlignment = .center
+
+        imgFrontPokemon.contentMode = .scaleAspectFit
     }
 
     func refreshView() {
         lblTitle.text = pokemon.name
 
-        guard let uwpImgFrontPokemon = imgFrontPokemon,
-            let url = URL(string: pokemon.frontDefaultUrlStr) else { return }
+        guard  let url = URL(string: pokemon.frontDefaultUrlStr) else { return }
 
-        uwpImgFrontPokemon.sd_imageTransition = .fade
-        uwpImgFrontPokemon.sd_setShowActivityIndicatorView(true)
-        uwpImgFrontPokemon.sd_setIndicatorStyle(.gray)
-        uwpImgFrontPokemon.sd_setImage(with: url,
+        imgFrontPokemon.sd_imageTransition = .fade
+        imgFrontPokemon.sd_setShowActivityIndicatorView(true)
+        imgFrontPokemon.sd_setIndicatorStyle(.gray)
+        imgFrontPokemon.sd_setImage(with: url,
                                        placeholderImage: nil,
                                        options:.cacheMemoryOnly)
     }

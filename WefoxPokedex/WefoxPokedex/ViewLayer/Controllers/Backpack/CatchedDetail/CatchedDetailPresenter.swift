@@ -30,17 +30,16 @@ class CatchedDetailPresenter: UIViewController {
         setupPresenter()
     }
 
-
     // MARK: - Private - Internal
     private func setupPresenter() {
+        self.title = R.string.localizable.catch_pokemon_title.key.localized
+        self.view.backgroundColor = AppColors.CatchedDetail.background
 
         injectedCatchedDetailModelView.onStateChanged = { [weak self] newViewModelState in
             guard let weakSelf = self else { return }
             weakSelf.refreshView(catchedDetailViewModelState: newViewModelState)
         }
         injectedCatchedDetailModelView.start()
-
-        //activityIndicator.style = .whiteLarge
     }
 
 
@@ -52,7 +51,6 @@ class CatchedDetailPresenter: UIViewController {
 
     func refreshCheckingCatched(pokemon: Pokemon) {
         self.catchedDetailView.set(pokemon: pokemon)
-       // self.injectedCatchPokemonViewModel.exists(pokemon: pokemon)
     }
 
 }

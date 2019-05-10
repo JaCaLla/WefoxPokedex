@@ -33,7 +33,7 @@ class CatchedListView: UICollectionView {
 
     // MARK: - Private/Internal
     func setupView() {
-         self.collectionViewFlowLayout.baristaFlowLayout(view: self, isDefaultSelector: false)
+         self.collectionViewFlowLayout.backpacklowLayout(view: self)
          self.dataSource = self
          self.delegate = self
     }
@@ -64,15 +64,15 @@ extension CatchedListView: UICollectionViewDelegate {
 
 extension UICollectionViewFlowLayout {
 
-    func baristaFlowLayout(view: UIView, isDefaultSelector: Bool) {
+    func backpacklowLayout(view: UIView) {
 
-        let numItemsPerRow: CGFloat = 3
+        let numItemsPerRow: CGFloat = 5
         let marginWidth: CGFloat = 15
         let numMargins: CGFloat = numItemsPerRow + 1
 
         let sideSize = floor((view.frame.size.width - (numMargins + 1 )*marginWidth ) / numItemsPerRow)
 
-        self.itemSize = CGSize(width: sideSize + (isDefaultSelector ? 10.0 : 0.0), height: sideSize + (isDefaultSelector ? 30.0 : 20.0))//CGSize(width: sideSize, height: sideSize + 20)
+        self.itemSize = CGSize(width: sideSize, height: sideSize +  10.0)
         self.minimumInteritemSpacing = 0//marginWidth
         self.minimumLineSpacing = 0// marginWidth
         self.scrollDirection = .vertical

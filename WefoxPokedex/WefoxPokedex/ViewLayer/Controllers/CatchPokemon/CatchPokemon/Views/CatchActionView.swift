@@ -38,27 +38,28 @@ class CatchActionView: UIView {
     // MARK: - Internal/Private
     func setupView() {
 
-        self.backgroundColor = AppColors.PersonDetail.background
+        self.backgroundColor = AppColors.CatchPokemon.background
 
         btnCatch.isHidden = true
-        btnCatch.titleLabel?.font        = AppFonts.PersonDetail.buttonFont
-        btnCatch.titleLabel?.textColor   = AppColors.PersonDetail.fontColor
-        btnCatch.backgroundColor         = AppColors.PersonDetail.buttonBackgroundColor
+        btnCatch.titleLabel?.font        = AppFonts.CatchPokemon.buttonFont
+        btnCatch.titleLabel?.textColor   = AppColors.CatchPokemon.buttonFontdColor
+        btnCatch.backgroundColor         = AppColors.CatchPokemon.buttonBackgroundColor
         btnCatch.setTitle(R.string.localizable.catch_pokemon_button_catch.key.localized, for: .normal)
         btnCatch.layer.cornerRadius = 5.0
+        btnCatch.dropShadow()
         btnCatch.addTarget(self, action: #selector(onActionButtonCatch), for: .touchUpInside)
 
-        btnLeave.titleLabel?.font        = AppFonts.PersonDetail.buttonFont
-        btnLeave.titleLabel?.textColor   = AppColors.PersonDetail.fontColor
-        btnLeave.backgroundColor         = AppColors.PersonDetail.buttonBackgroundColor
+        btnLeave.titleLabel?.font        = AppFonts.CatchPokemon.buttonFont
+        btnLeave.titleLabel?.textColor   = AppColors.CatchPokemon.buttonFontdColor
+        btnLeave.backgroundColor         = AppColors.CatchPokemon.buttonBackgroundColor
         btnLeave.setTitle(R.string.localizable.catch_pokemon_button_leave.key.localized, for: .normal)
         btnLeave.layer.cornerRadius = 5.0
+        btnLeave.dropShadow()
         btnLeave.addTarget(self, action: #selector(onActionButtonLeave), for: .touchUpInside)
     }
 
     private func  refreshView() {
         self.btnCatch.isHidden = wasCatched
-
     }
 
     // MARK: - Target methods
@@ -69,7 +70,4 @@ class CatchActionView: UIView {
     @objc func onActionButtonLeave(sender: UIButton!) {
         self.onLeave()
     }
-
-
-
 }

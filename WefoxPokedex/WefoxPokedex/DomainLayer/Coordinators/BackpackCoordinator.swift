@@ -1,7 +1,9 @@
 //
-//  BuyCoordinator.swift
-//  MVVMRedux
+//  BackpackCoordinator.swift
+//  WefoxPokedex
 //
+//  Created by Javier Calatrava Llaveria on 10/05/2019.
+//  Copyright © 2019 Javier Calatrava Llaveria. All rights reserved.
 //
 
 import Foundation
@@ -33,21 +35,14 @@ class BackpackCoordinator {
             weakSelf.presentPokemonDetail(pokemon: pokemon)
         }
 
-
-
         navigationController.viewControllers = [catchedListPresenter]
-      //   UIApplication.present(viewController: mainFlowNavigationController, animated: true, completion: nil)
-
-        navigationController.tabBarItem = UITabBarItem(title: "backpack", image: nil, tag: 1)
+        navigationController.tabBarItem = UITabBarItem(title:  R.string.localizable.tab_backpack.key.localized, image: nil, tag: 1)
         return navigationController
     }
-
 
     func presentPokemonDetail(pokemon:Pokemon) {
         let catchedDetailModelView = CatchedDetailViewModel(pokemon: pokemon)
         let catchedDetailPresenter = CatchedDetailPresenter.instantiate(catchedDetailModelView: catchedDetailModelView)
-
-
         self.navigationController.pushViewController(catchedDetailPresenter, animated: true)
     }
 }

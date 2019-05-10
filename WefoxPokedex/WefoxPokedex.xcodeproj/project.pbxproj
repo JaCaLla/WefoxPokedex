@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E34234122831A1300D7DF2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E34234022831A1300D7DF2A /* AppDelegate.swift */; };
-		5E34234322831A1300D7DF2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E34234222831A1300D7DF2A /* ViewController.swift */; };
-		5E34234622831A1300D7DF2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E34234422831A1300D7DF2A /* Main.storyboard */; };
 		5E34234822831A1400D7DF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E34234722831A1400D7DF2A /* Assets.xcassets */; };
 		5E34234B22831A1400D7DF2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E34234922831A1400D7DF2A /* LaunchScreen.storyboard */; };
 		5E34236622831E7C00D7DF2A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E34236522831E7C00D7DF2A /* R.generated.swift */; };
@@ -76,6 +74,7 @@
 		5ECEB4F72285D67C005C73ED /* CatchedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4F62285D67C005C73ED /* CatchedDetailView.swift */; };
 		5ECEB4FA2285DD46005C73ED /* UTCatchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4F92285DD46005C73ED /* UTCatchListViewModel.swift */; };
 		5ECEB4FC2285E21C005C73ED /* UTCatchedDetailModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4FB2285E21C005C73ED /* UTCatchedDetailModelView.swift */; };
+		5ECEB4FE22860800005C73ED /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4FD22860800005C73ED /* UIViewExtension.swift */; };
 		C5132C0D1C78029F47DF9F11 /* Pods_WefoxPokedexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6C47A5E3D3C85BC887B437 /* Pods_WefoxPokedexTests.framework */; };
 		D9D93985C09F9DE21FFC2FED /* Pods_WefoxPokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F31712E70DC397DFFBAA3A6 /* Pods_WefoxPokedex.framework */; };
 /* End PBXBuildFile section */
@@ -95,8 +94,6 @@
 		3B37742A5A664A44130934E9 /* Pods-WefoxPokedexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WefoxPokedexTests.release.xcconfig"; path = "Target Support Files/Pods-WefoxPokedexTests/Pods-WefoxPokedexTests.release.xcconfig"; sourceTree = "<group>"; };
 		5E34233D22831A1300D7DF2A /* WefoxPokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WefoxPokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E34234022831A1300D7DF2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E34234222831A1300D7DF2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5E34234522831A1300D7DF2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E34234722831A1400D7DF2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E34234A22831A1400D7DF2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E34234C22831A1400D7DF2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -166,6 +163,7 @@
 		5ECEB4F62285D67C005C73ED /* CatchedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchedDetailView.swift; sourceTree = "<group>"; };
 		5ECEB4F92285DD46005C73ED /* UTCatchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTCatchListViewModel.swift; sourceTree = "<group>"; };
 		5ECEB4FB2285E21C005C73ED /* UTCatchedDetailModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTCatchedDetailModelView.swift; sourceTree = "<group>"; };
+		5ECEB4FD22860800005C73ED /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		6F31712E70DC397DFFBAA3A6 /* Pods_WefoxPokedex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WefoxPokedex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A440F61AEBC11F5E2DBBD5F /* Pods-WefoxPokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WefoxPokedex.release.xcconfig"; path = "Target Support Files/Pods-WefoxPokedex/Pods-WefoxPokedex.release.xcconfig"; sourceTree = "<group>"; };
 		9C51CCCC93FD88C926E91877 /* Pods-WefoxPokedexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WefoxPokedexTests.debug.xcconfig"; path = "Target Support Files/Pods-WefoxPokedexTests/Pods-WefoxPokedexTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -228,10 +226,6 @@
 				5E34237B22831FE100D7DF2A /* DomainLayer */,
 				5E34236722831F5A00D7DF2A /* DataLayer */,
 				5E34234022831A1300D7DF2A /* AppDelegate.swift */,
-				5E34234222831A1300D7DF2A /* ViewController.swift */,
-				5E34234422831A1300D7DF2A /* Main.storyboard */,
-				5E34234722831A1400D7DF2A /* Assets.xcassets */,
-				5E34234922831A1400D7DF2A /* LaunchScreen.storyboard */,
 				5E34234C22831A1400D7DF2A /* Info.plist */,
 			);
 			path = WefoxPokedex;
@@ -262,6 +256,7 @@
 		5E34236322831B7600D7DF2A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E34234722831A1400D7DF2A /* Assets.xcassets */,
 				5E8F945E2284CF36002990E7 /* Strings */,
 				5E8F944D2284CBFA002990E7 /* Fonts */,
 				5E8F94482284CB9C002990E7 /* Styles */,
@@ -468,6 +463,7 @@
 		5E8F942322849863002990E7 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				5E34234922831A1400D7DF2A /* LaunchScreen.storyboard */,
 				5E8F9426228498F6002990E7 /* AppStoryboard.swift */,
 				5E8F9424228498A1002990E7 /* catchPokemon.storyboard */,
 				5E8F942F2284A1BA002990E7 /* backpack.storyboard */,
@@ -480,6 +476,7 @@
 			children = (
 				5E8F942B22849AB6002990E7 /* UIApplicationExtension.swift */,
 				5E8F94612284D02D002990E7 /* StringExtension.swift */,
+				5ECEB4FD22860800005C73ED /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -759,7 +756,6 @@
 				5E8F94302284A1BA002990E7 /* backpack.storyboard in Resources */,
 				5E34234822831A1400D7DF2A /* Assets.xcassets in Resources */,
 				5E8F9425228498A1002990E7 /* catchPokemon.storyboard in Resources */,
-				5E34234622831A1300D7DF2A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,7 +872,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E34234322831A1300D7DF2A /* ViewController.swift in Sources */,
 				5E8F9427228498F6002990E7 /* AppStoryboard.swift in Sources */,
 				5E8F94472284C39D002990E7 /* InputCodeView.swift in Sources */,
 				5ECEB4ED2285C11D005C73ED /* CatchedListView.swift in Sources */,
@@ -891,6 +886,7 @@
 				5ECEB4F72285D67C005C73ED /* CatchedDetailView.swift in Sources */,
 				5E34234122831A1300D7DF2A /* AppDelegate.swift in Sources */,
 				5E8F941A2284968F002990E7 /* ConcurrentOperation.swift in Sources */,
+				5ECEB4FE22860800005C73ED /* UIViewExtension.swift in Sources */,
 				5E34237A22831FD600D7DF2A /* APIManager.swift in Sources */,
 				5E8F942E22849C99002990E7 /* CatchPokemonCoordinator.swift in Sources */,
 				5E8F943B2284AD98002990E7 /* CatchUseCase.swift in Sources */,
@@ -952,14 +948,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5E34234422831A1300D7DF2A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E34234522831A1300D7DF2A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5E34234922831A1400D7DF2A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

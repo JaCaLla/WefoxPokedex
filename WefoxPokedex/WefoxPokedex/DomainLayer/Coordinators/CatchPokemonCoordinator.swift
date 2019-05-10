@@ -1,7 +1,9 @@
 //
-//  BuyCoordinator.swift
-//  MVVMRedux
+//  CatchPokemonCoordinator.swift
+//  WefoxPokedex
 //
+//  Created by Javier Calatrava Llaveria on 10/05/2019.
+//  Copyright © 2019 Javier Calatrava Llaveria. All rights reserved.
 //
 
 import Foundation
@@ -27,19 +29,17 @@ final class CatchPokemonCoordinator {
     private func presentSearchPokemon() -> UINavigationController {
 
         let searchPokemonPresenter = SearchPokemonPresenter.instantiate()
-
         searchPokemonPresenter.onFound = { [weak self] pokemon in
             guard let weakSelf = self else { return }
             weakSelf.presentCatchPokemon(pokemon: pokemon)
         }
-         searchPokemonPresenter.modalTransitionStyle = .crossDissolve
+        searchPokemonPresenter.modalTransitionStyle = .crossDissolve
 
         navigationController.viewControllers = [searchPokemonPresenter]
-
-        navigationController.tabBarItem = UITabBarItem(title: "catch", image: nil, tag: 0)
+        navigationController.tabBarItem = UITabBarItem(title: R.string.localizable.tab_catched.key.localized, image: nil, tag: 0)
         return navigationController
     }
-
+    
     private func presentCatchPokemon(pokemon:Pokemon) {
         let catchPokemonViewModel = CatchPokemonViewModel(pokemon: pokemon)
         let catchPokemonPresenter = CatchPokemonPresenter.instantiate(catchPokemonViewModel: catchPokemonViewModel)

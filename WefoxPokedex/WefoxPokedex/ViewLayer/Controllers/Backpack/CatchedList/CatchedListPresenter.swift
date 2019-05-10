@@ -40,7 +40,9 @@ class CatchedListPresenter: UIViewController {
 
     // MARK: - Private/Internal
     private func setupPresenter() {
-
+        self.title = R.string.localizable.tab_backpack.key.localized
+        self.view.backgroundColor = AppColors.CatchedDetail.background
+        
         injectedCatchListViewModel.onStateChanged = { [weak self] newViewModelState in
             guard let weakSelf = self else { return }
             weakSelf.refreshView(catchListViewModelState: newViewModelState)

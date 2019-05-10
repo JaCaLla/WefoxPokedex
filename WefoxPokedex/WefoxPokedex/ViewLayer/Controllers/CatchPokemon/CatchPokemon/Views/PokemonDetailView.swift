@@ -79,18 +79,15 @@ class PokemonDetailView: UITableView {
 
     // MARK: - Internal/Private
     func setupView() {
-
-        self.backgroundColor = AppColors.PersonDetail.background
-        self.dataSource         =  self
+        self.tableFooterView = UIView()
+        self.backgroundColor = AppColors.CatchPokemon.background
+        self.dataSource      =  self
     }
 
     private func  refreshView() {
 
         self.reloadData()
     }
-
-
-
 }
 
 extension PokemonDetailView: UITableViewDataSource {

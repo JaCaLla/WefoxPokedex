@@ -40,9 +40,14 @@ class SearchPokemonPresenter: UIViewController {
     // MARK: - Private/Internal
     private func setupPresenter() {
 
+        self.title = R.string.localizable.tab_catched.key.localized
+        self.view.backgroundColor = AppColors.CatchPokemon.background
+
         injectedSearchPokemonViewModel.onStateChanged = { [weak self] newViewModelState in
-            guard let weakSelf = self else { return }
-            weakSelf.refreshView(searchPokemonViewModelState: newViewModelState)
+            DispatchQueue.main.async {
+                guard let weakSelf = self else { return }
+                weakSelf.refreshView(searchPokemonViewModelState: newViewModelState)
+            }
         }
         injectedSearchPokemonViewModel.start()
 
@@ -50,7 +55,7 @@ class SearchPokemonPresenter: UIViewController {
             guard let weakSelf = self else { return }
             weakSelf.injectedSearchPokemonViewModel.getPokemon(id: code)
         }
-        activityIndicator.style = .whiteLarge
+        activityIndicator.style = .gray
     }
 
     private func refreshView(searchPokemonViewModelState:SearchPokemonViewModelState) {
@@ -81,7 +86,7 @@ class SearchPokemonPresenter: UIViewController {
     }
 
     func refreshViewFetchedNotFound() {
-        inputCodeView.isHidden = true
+        inputCodeView.isHidden = false
         activityIndicator.isHidden = true
         self.presentAlertPokemonNotFound(onComplete: { [weak self] in
             guard let weakSelf = self else { return }

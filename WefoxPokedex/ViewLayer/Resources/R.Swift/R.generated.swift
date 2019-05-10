@@ -102,12 +102,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `Main`.
-    static let main = _R.storyboard.main()
     /// Storyboard `backpack`.
     static let backpack = _R.storyboard.backpack()
     /// Storyboard `catchPokemon`.
@@ -116,11 +114,6 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
-    }
-    
-    /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.main)
     }
     
     /// `UIStoryboard(name: "backpack", bundle: ...)`
@@ -138,7 +131,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 32 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 35 localization keys.
     struct localizable {
       /// Value: ...or leave it
       static let catch_pokemon_button_leave = Rswift.StringResource(key: "catch_pokemon_button_leave", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -146,6 +139,8 @@ struct R: Rswift.Validatable {
       static let person_detail_back = Rswift.StringResource(key: "person_detail_back", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Alert
       static let search_pokemon_alert_title = Rswift.StringResource(key: "search_pokemon_alert_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Backpack
+      static let tab_backpack = Rswift.StringResource(key: "tab_backpack", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Base experience
       static let catch_pokemon_attribute_base_experience = Rswift.StringResource(key: "catch_pokemon_attribute_base_experience", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Camera
@@ -154,6 +149,8 @@ struct R: Rswift.Validatable {
       static let person_detail_cancel = Rswift.StringResource(key: "person_detail_cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Cancel
       static let person_detail_picker_cancel = Rswift.StringResource(key: "person_detail_picker_cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Catch
+      static let tab_catched = Rswift.StringResource(key: "tab_catched", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Catch it!
       static let catch_pokemon_button_catch = Rswift.StringResource(key: "catch_pokemon_button_catch", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Catched
@@ -184,12 +181,14 @@ struct R: Rswift.Validatable {
       static let person_list_title = Rswift.StringResource(key: "person_list_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Person Detail
       static let person_list_detail = Rswift.StringResource(key: "person_list_detail", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: PokedexTest
+      static let search_pokemon_title = Rswift.StringResource(key: "search_pokemon_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Pokemon Detail
       static let catch_pokemon_title = Rswift.StringResource(key: "catch_pokemon_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Pokemon code not found try a lower number...
       static let search_pokemon_alert_message = Rswift.StringResource(key: "search_pokemon_alert_message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Try a Pokemon numeric code:
-      static let search_pokemon_title = Rswift.StringResource(key: "search_pokemon_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      static let search_pokemon_label = Rswift.StringResource(key: "search_pokemon_label", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Try for luck!
       static let search_pokemon_button_title = Rswift.StringResource(key: "search_pokemon_button_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Types
@@ -220,6 +219,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("search_pokemon_alert_title", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: Backpack
+      static func tab_backpack(_: Void = ()) -> String {
+        return NSLocalizedString("tab_backpack", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: Base experience
       static func catch_pokemon_attribute_base_experience(_: Void = ()) -> String {
         return NSLocalizedString("catch_pokemon_attribute_base_experience", bundle: R.hostingBundle, comment: "")
@@ -238,6 +242,11 @@ struct R: Rswift.Validatable {
       /// Value: Cancel
       static func person_detail_picker_cancel(_: Void = ()) -> String {
         return NSLocalizedString("person_detail_picker_cancel", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Catch
+      static func tab_catched(_: Void = ()) -> String {
+        return NSLocalizedString("tab_catched", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: Catch it!
@@ -315,6 +324,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("person_list_detail", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: PokedexTest
+      static func search_pokemon_title(_: Void = ()) -> String {
+        return NSLocalizedString("search_pokemon_title", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: Pokemon Detail
       static func catch_pokemon_title(_: Void = ()) -> String {
         return NSLocalizedString("catch_pokemon_title", bundle: R.hostingBundle, comment: "")
@@ -326,8 +340,8 @@ struct R: Rswift.Validatable {
       }
       
       /// Value: Try a Pokemon numeric code:
-      static func search_pokemon_title(_: Void = ()) -> String {
-        return NSLocalizedString("search_pokemon_title", bundle: R.hostingBundle, comment: "")
+      static func search_pokemon_label(_: Void = ()) -> String {
+        return NSLocalizedString("search_pokemon_label", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: Try for luck!
@@ -392,7 +406,6 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try launchScreen.validate()
-      try main.validate()
       try backpack.validate()
       try catchPokemon.validate()
     }
@@ -421,7 +434,9 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct catchPokemon: Rswift.StoryboardResourceType, Rswift.Validatable {
+    struct catchPokemon: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = SearchPokemonPresenter
+      
       let bundle = R.hostingBundle
       let catchPokemonPresenter = StoryboardViewControllerResource<CatchPokemonPresenter>(identifier: "CatchPokemonPresenter")
       let name = "catchPokemon"
@@ -450,20 +465,6 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let name = "LaunchScreen"
-      
-      static func validate() throws {
-        if #available(iOS 11.0, *) {
-        }
-      }
-      
-      fileprivate init() {}
-    }
-    
-    struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = ViewController
-      
-      let bundle = R.hostingBundle
-      let name = "Main"
       
       static func validate() throws {
         if #available(iOS 11.0, *) {

@@ -39,6 +39,9 @@ class CatchPokemonPresenter: UIViewController {
     }
     // MARK: - Private/Internal
     private func setupPresenter() {
+        
+        self.title = R.string.localizable.catch_pokemon_title.key.localized
+        self.view.backgroundColor = AppColors.SearchPokemon.background
 
         injectedCatchPokemonViewModel.onStateChanged = { [weak self] newViewModelState in
             guard let weakSelf = self else { return }
@@ -56,8 +59,6 @@ class CatchPokemonPresenter: UIViewController {
             weakSelf.onCatchOrLeave()
 
         }
-
-        //activityIndicator.style = .whiteLarge
     }
 
     private func refreshView(catchPokemonViewModelState:CatchPokemonViewModelState) {
@@ -76,6 +77,4 @@ class CatchPokemonPresenter: UIViewController {
     func refreshCheckedCatched(existInTheBackpack: Bool) {
         self.catchActionView.set(existInTheBackpack: existInTheBackpack)
     }
-
-
 }

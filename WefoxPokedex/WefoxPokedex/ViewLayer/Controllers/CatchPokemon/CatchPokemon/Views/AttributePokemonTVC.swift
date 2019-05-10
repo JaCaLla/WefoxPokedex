@@ -16,15 +16,25 @@ class AttributePokemonTVC: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupView()
     }
 
     // MARK: - Public helpets
     func set(name:String, value: String) {
 
         lblAttributeName.text = name
-
         lblAttributeValue.text = value
+    }
+
+    func setupView() {
+
+        lblAttributeName.font = AppFonts.CatchPokemon.nameFont
+        lblAttributeName.textColor = AppColors.CatchPokemon.nameFontColor
+
+        lblAttributeValue.font = AppFonts.CatchPokemon.valueFont
+        lblAttributeValue.textColor = AppColors.CatchPokemon.valueFontColor
+        
+        self.backgroundColor = AppColors.CatchPokemon.background
     }
 
 }

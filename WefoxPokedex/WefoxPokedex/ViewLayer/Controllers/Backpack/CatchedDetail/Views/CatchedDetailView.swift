@@ -101,8 +101,8 @@ class CatchedDetailView: UITableView {
 
     // MARK: - Internal/Private
     func setupView() {
-
-        self.backgroundColor = AppColors.PersonDetail.background
+        self.tableFooterView = UIView()
+        self.backgroundColor = AppColors.CatchedDetail.background
         self.dataSource         =  self
     }
 

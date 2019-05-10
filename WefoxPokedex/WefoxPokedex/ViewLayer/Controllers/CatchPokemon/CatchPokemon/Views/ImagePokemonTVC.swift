@@ -16,20 +16,25 @@ class ImagePokemonTVC: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupView()
     }
+
 
     // MARK: - Public helpets
     func set(imageUrlStr:String) {
-        guard let uwpImgFrontPokemon = imgFrontPokemon,
-            let url = URL(string: imageUrlStr) else { return }
+        guard let url = URL(string: imageUrlStr) else { return }
 
-        uwpImgFrontPokemon.sd_imageTransition = .fade
-        uwpImgFrontPokemon.sd_setShowActivityIndicatorView(true)
-        uwpImgFrontPokemon.sd_setIndicatorStyle(.gray)
-        uwpImgFrontPokemon.sd_setImage(with: url,
+        imgFrontPokemon.sd_imageTransition = .fade
+        imgFrontPokemon.sd_setShowActivityIndicatorView(true)
+        imgFrontPokemon.sd_setIndicatorStyle(.gray)
+        imgFrontPokemon.sd_setImage(with: url,
                                        placeholderImage: nil,
                                        options:.cacheMemoryOnly)
+    }
+
+    func setupView() {
+        self.backgroundColor = AppColors.CatchPokemon.background
+        imgFrontPokemon.contentMode = .scaleAspectFit
     }
 
 }

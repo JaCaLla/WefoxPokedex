@@ -24,27 +24,25 @@ class InputCodeView: UIView {
         self.setupView()
     }
 
-
-
     // MARK: - Private/Internal
     func setupView() {
 
         self.backgroundColor = AppColors.SearchPokemon.background
 
-        lblTitle.font = AppFonts.PersonsList.emailFont
+        lblTitle.font = AppFonts.SearchPokemon.emailFont
         lblTitle.textColor = AppColors.SearchPokemon.titleFontColor
-        lblTitle.text = R.string.localizable.search_pokemon_title.key.localized
+        lblTitle.text = R.string.localizable.search_pokemon_label.key.localized
 
-        txtCode.font = AppFonts.PersonsList.emailFont
+        txtCode.font = AppFonts.SearchPokemon.emailFont
         txtCode.textColor = AppColors.SearchPokemon.textInputColor
         txtCode.keyboardType = .numberPad
 
-        btnSearch.titleLabel?.font        = AppFonts.PersonDetail.buttonFont
-        btnSearch.titleLabel?.textColor   = AppColors.PersonDetail.fontColor
-        btnSearch.backgroundColor         = AppColors.PersonDetail.buttonBackgroundColor
+        btnSearch.titleLabel?.font        = AppFonts.SearchPokemon.buttonFont
+        btnSearch.titleLabel?.textColor   = AppColors.SearchPokemon.fontColor
+        btnSearch.backgroundColor         = AppColors.SearchPokemon.buttonBackgroundColor
         btnSearch.setTitle(R.string.localizable.search_pokemon_button_title.key.localized, for: .normal)
         btnSearch.layer.cornerRadius = 5.0
-
+        btnSearch.dropShadow()
         btnSearch.addTarget(self, action: #selector(onActionButton), for: .touchUpInside)
     }
 
@@ -56,5 +54,4 @@ class InputCodeView: UIView {
         txtCode.endEditing(true)
         onCodeEntered(text)
     }
-
 }
