@@ -13,6 +13,7 @@
 "catch_pokemon_attribute_height" = "Height";
 "catch_pokemon_attribute_base_experience" = "Base experience";
 "catch_pokemon_attribute_experience" = "Experience";
+"catch_pokemon_attribute_types" = "Types";
 "catch_pokemon_value_catched_not_catched" = "Not catched yet!!!";
 "catch_pokemon_button_catch" = "Catch it!";
 "catch_pokemon_button_leave" = "...or leave it";

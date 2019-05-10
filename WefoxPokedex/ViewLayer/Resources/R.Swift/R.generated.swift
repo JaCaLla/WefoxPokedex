@@ -90,10 +90,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 3 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `AttributePokemonTVC`.
     static let attributePokemonTVC: Rswift.ReuseIdentifier<AttributePokemonTVC> = Rswift.ReuseIdentifier(identifier: "AttributePokemonTVC")
+    /// Reuse identifier `CatchedPokemonCVC`.
+    static let catchedPokemonCVC: Rswift.ReuseIdentifier<CatchedPokemonCVC> = Rswift.ReuseIdentifier(identifier: "CatchedPokemonCVC")
     /// Reuse identifier `ImagePokemonTVC`.
     static let imagePokemonTVC: Rswift.ReuseIdentifier<ImagePokemonTVC> = Rswift.ReuseIdentifier(identifier: "ImagePokemonTVC")
     
@@ -136,7 +138,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 31 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 32 localization keys.
     struct localizable {
       /// Value: ...or leave it
       static let catch_pokemon_button_leave = Rswift.StringResource(key: "catch_pokemon_button_leave", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -190,6 +192,8 @@ struct R: Rswift.Validatable {
       static let search_pokemon_title = Rswift.StringResource(key: "search_pokemon_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Try for luck!
       static let search_pokemon_button_title = Rswift.StringResource(key: "search_pokemon_button_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Types
+      static let catch_pokemon_attribute_types = Rswift.StringResource(key: "catch_pokemon_attribute_types", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Warning
       static let person_detail_picker_warning_image = Rswift.StringResource(key: "person_detail_picker_warning_image", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Weight
@@ -331,6 +335,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("search_pokemon_button_title", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: Types
+      static func catch_pokemon_attribute_types(_: Void = ()) -> String {
+        return NSLocalizedString("catch_pokemon_attribute_types", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: Warning
       static func person_detail_picker_warning_image(_: Void = ()) -> String {
         return NSLocalizedString("person_detail_picker_warning_image", bundle: R.hostingBundle, comment: "")
@@ -390,8 +399,13 @@ struct _R: Rswift.Validatable {
     
     struct backpack: Rswift.StoryboardResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
+      let catchedDetailPresenter = StoryboardViewControllerResource<CatchedDetailPresenter>(identifier: "CatchedDetailPresenter")
       let catchedListPresenter = StoryboardViewControllerResource<CatchedListPresenter>(identifier: "CatchedListPresenter")
       let name = "backpack"
+      
+      func catchedDetailPresenter(_: Void = ()) -> CatchedDetailPresenter? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: catchedDetailPresenter)
+      }
       
       func catchedListPresenter(_: Void = ()) -> CatchedListPresenter? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: catchedListPresenter)
@@ -400,6 +414,7 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
+        if _R.storyboard.backpack().catchedDetailPresenter() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'catchedDetailPresenter' could not be loaded from storyboard 'backpack' as 'CatchedDetailPresenter'.") }
         if _R.storyboard.backpack().catchedListPresenter() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'catchedListPresenter' could not be loaded from storyboard 'backpack' as 'CatchedListPresenter'.") }
       }
       

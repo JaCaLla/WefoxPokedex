@@ -13,7 +13,7 @@ class BackpackCoordinator {
     static let shared =  BackpackCoordinator()
 
     // MARK: - Private attributes
-    private let mainFlowNavigationController =  UINavigationController()
+    private let navigationController =  UINavigationController()
 
 
     private init() { /*This prevents others from using the default '()' initializer for this class. */ }
@@ -28,16 +28,26 @@ class BackpackCoordinator {
 
         let catchedListPresenter = CatchedListPresenter.instantiate()
          catchedListPresenter.modalTransitionStyle = .crossDissolve
+        catchedListPresenter.onSelected = { [weak self] pokemon in
+            guard let weakSelf = self else { return }
+            weakSelf.presentPokemonDetail(pokemon: pokemon)
+        }
 
 
 
-        mainFlowNavigationController.viewControllers = [catchedListPresenter]
+        navigationController.viewControllers = [catchedListPresenter]
       //   UIApplication.present(viewController: mainFlowNavigationController, animated: true, completion: nil)
 
-        mainFlowNavigationController.tabBarItem = UITabBarItem(title: "backpack", image: nil, tag: 1)
-        return mainFlowNavigationController
+        navigationController.tabBarItem = UITabBarItem(title: "backpack", image: nil, tag: 1)
+        return navigationController
     }
 
 
+    func presentPokemonDetail(pokemon:Pokemon) {
+        let catchedDetailModelView = CatchedDetailViewModel(pokemon: pokemon)
+        let catchedDetailPresenter = CatchedDetailPresenter.instantiate(catchedDetailModelView: catchedDetailModelView)
 
+
+        self.navigationController.pushViewController(catchedDetailPresenter, animated: true)
+    }
 }

@@ -38,28 +38,7 @@ class CatchUseCase:NSObject {
        self.injectedDataManager.addToBackpack(pokemon: pokemonCathed, onComplete: onComplete)
     }
 
-/*
-    func getFirst(onSucceed : @escaping (([Person]) -> Void),
-                  onFailed: @escaping ((ResponseCode) -> Void)) {
-        injectedDataManager.getFirst(onSucceed:onSucceed,onFailed:onFailed)
+    func getBackpack(onComplete: (DataManagerResponse) -> ()) {
+        self.injectedDataManager.getBackpack(onComplete: onComplete)
     }
-
-    func getNext(onSucceed : @escaping (([Person]) -> Void),
-                 onFailed: @escaping ((ResponseCode) -> Void)) {
-        injectedDataManager.getNext(onSucceed:onSucceed,onFailed:onFailed)
-    }
-
-    func remove(person:Person, onComplete: () -> Void = {/* Default empty block*/}) {
-        self.injectedDataManager.remove(person: person, onComplete: onComplete)
-    }
-
-    func update(oldPerson:Person,newPerson:Person, onComplete: (Person) -> Void = { _ in /* Default empty block*/}) {
-
-        self.injectedDataManager.update(oldPerson: oldPerson, newPerson: newPerson, onComplete: onComplete)
-    }
-
-    func getFetched(onComplete : @escaping (([Person]) -> Void)) {
-        self.injectedDataManager.getFetched(onComplete: onComplete)
-    }
-*/
 }

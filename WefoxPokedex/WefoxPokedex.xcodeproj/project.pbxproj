@@ -68,6 +68,14 @@
 		5ECEB4E422857FBD005C73ED /* CatchActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4E322857FBD005C73ED /* CatchActionView.swift */; };
 		5ECEB4E6228582E2005C73ED /* AttributePokemonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4E5228582E2005C73ED /* AttributePokemonTVC.swift */; };
 		5ECEB4E822858306005C73ED /* ImagePokemonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4E722858306005C73ED /* ImagePokemonTVC.swift */; };
+		5ECEB4EA2285BDEA005C73ED /* CatchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4E92285BDEA005C73ED /* CatchListViewModel.swift */; };
+		5ECEB4ED2285C11D005C73ED /* CatchedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4EC2285C11D005C73ED /* CatchedListView.swift */; };
+		5ECEB4EF2285C9FC005C73ED /* CatchedPokemonCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4EE2285C9FC005C73ED /* CatchedPokemonCVC.swift */; };
+		5ECEB4F22285D4F4005C73ED /* CatchedDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4F12285D4F4005C73ED /* CatchedDetailPresenter.swift */; };
+		5ECEB4F42285D5E1005C73ED /* CatchedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4F32285D5E1005C73ED /* CatchedDetailViewModel.swift */; };
+		5ECEB4F72285D67C005C73ED /* CatchedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4F62285D67C005C73ED /* CatchedDetailView.swift */; };
+		5ECEB4FA2285DD46005C73ED /* UTCatchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4F92285DD46005C73ED /* UTCatchListViewModel.swift */; };
+		5ECEB4FC2285E21C005C73ED /* UTCatchedDetailModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEB4FB2285E21C005C73ED /* UTCatchedDetailModelView.swift */; };
 		C5132C0D1C78029F47DF9F11 /* Pods_WefoxPokedexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6C47A5E3D3C85BC887B437 /* Pods_WefoxPokedexTests.framework */; };
 		D9D93985C09F9DE21FFC2FED /* Pods_WefoxPokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F31712E70DC397DFFBAA3A6 /* Pods_WefoxPokedex.framework */; };
 /* End PBXBuildFile section */
@@ -150,6 +158,14 @@
 		5ECEB4E322857FBD005C73ED /* CatchActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchActionView.swift; sourceTree = "<group>"; };
 		5ECEB4E5228582E2005C73ED /* AttributePokemonTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributePokemonTVC.swift; sourceTree = "<group>"; };
 		5ECEB4E722858306005C73ED /* ImagePokemonTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePokemonTVC.swift; sourceTree = "<group>"; };
+		5ECEB4E92285BDEA005C73ED /* CatchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchListViewModel.swift; sourceTree = "<group>"; };
+		5ECEB4EC2285C11D005C73ED /* CatchedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchedListView.swift; sourceTree = "<group>"; };
+		5ECEB4EE2285C9FC005C73ED /* CatchedPokemonCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchedPokemonCVC.swift; sourceTree = "<group>"; };
+		5ECEB4F12285D4F4005C73ED /* CatchedDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchedDetailPresenter.swift; sourceTree = "<group>"; };
+		5ECEB4F32285D5E1005C73ED /* CatchedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchedDetailViewModel.swift; sourceTree = "<group>"; };
+		5ECEB4F62285D67C005C73ED /* CatchedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchedDetailView.swift; sourceTree = "<group>"; };
+		5ECEB4F92285DD46005C73ED /* UTCatchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTCatchListViewModel.swift; sourceTree = "<group>"; };
+		5ECEB4FB2285E21C005C73ED /* UTCatchedDetailModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTCatchedDetailModelView.swift; sourceTree = "<group>"; };
 		6F31712E70DC397DFFBAA3A6 /* Pods_WefoxPokedex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WefoxPokedex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A440F61AEBC11F5E2DBBD5F /* Pods-WefoxPokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WefoxPokedex.release.xcconfig"; path = "Target Support Files/Pods-WefoxPokedex/Pods-WefoxPokedex.release.xcconfig"; sourceTree = "<group>"; };
 		9C51CCCC93FD88C926E91877 /* Pods-WefoxPokedexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WefoxPokedexTests.debug.xcconfig"; path = "Target Support Files/Pods-WefoxPokedexTests/Pods-WefoxPokedexTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -471,6 +487,7 @@
 		5E8F94312284A229002990E7 /* Backpack */ = {
 			isa = PBXGroup;
 			children = (
+				5ECEB4F02285D4B7005C73ED /* CatchedDetail */,
 				5E8F94322284A239002990E7 /* CatchedList */,
 			);
 			path = Backpack;
@@ -479,7 +496,9 @@
 		5E8F94322284A239002990E7 /* CatchedList */ = {
 			isa = PBXGroup;
 			children = (
+				5ECEB4EB2285C0D5005C73ED /* Views */,
 				5E8F94332284A6C3002990E7 /* CatchedListPresenter.swift */,
+				5ECEB4E92285BDEA005C73ED /* CatchListViewModel.swift */,
 			);
 			path = CatchedList;
 			sourceTree = "<group>";
@@ -519,6 +538,7 @@
 		5E8F94412284B394002990E7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5ECEB4F82285DD05005C73ED /* Backpack */,
 				5E8F94422284B3A5002990E7 /* CatchPokemon */,
 			);
 			path = Controllers;
@@ -592,6 +612,42 @@
 				5ECEB4E322857FBD005C73ED /* CatchActionView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5ECEB4EB2285C0D5005C73ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5ECEB4EC2285C11D005C73ED /* CatchedListView.swift */,
+				5ECEB4EE2285C9FC005C73ED /* CatchedPokemonCVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5ECEB4F02285D4B7005C73ED /* CatchedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5ECEB4F52285D646005C73ED /* Views */,
+				5ECEB4F12285D4F4005C73ED /* CatchedDetailPresenter.swift */,
+				5ECEB4F32285D5E1005C73ED /* CatchedDetailViewModel.swift */,
+			);
+			path = CatchedDetail;
+			sourceTree = "<group>";
+		};
+		5ECEB4F52285D646005C73ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5ECEB4F62285D67C005C73ED /* CatchedDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5ECEB4F82285DD05005C73ED /* Backpack */ = {
+			isa = PBXGroup;
+			children = (
+				5ECEB4F92285DD46005C73ED /* UTCatchListViewModel.swift */,
+				5ECEB4FB2285E21C005C73ED /* UTCatchedDetailModelView.swift */,
+			);
+			path = Backpack;
 			sourceTree = "<group>";
 		};
 		7B2C5858BF1B66D07E31C9DA /* Pods */ = {
@@ -785,7 +841,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/ViewLayer/Resources/R.Swift/R.generated.swift",
+				$SRCROOT/ViewLayer/Resources/R.Swift/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -823,6 +879,7 @@
 				5E34234322831A1300D7DF2A /* ViewController.swift in Sources */,
 				5E8F9427228498F6002990E7 /* AppStoryboard.swift in Sources */,
 				5E8F94472284C39D002990E7 /* InputCodeView.swift in Sources */,
+				5ECEB4ED2285C11D005C73ED /* CatchedListView.swift in Sources */,
 				5ECEB4E822858306005C73ED /* ImagePokemonTVC.swift in Sources */,
 				5E8F944A2284CBCF002990E7 /* AppColors.swift in Sources */,
 				5E8F94622284D02D002990E7 /* StringExtension.swift in Sources */,
@@ -831,6 +888,7 @@
 				5E34239C22836CC200D7DF2A /* RealmConfig.swift in Sources */,
 				5E8F944C2284CBEF002990E7 /* AppFonts.swift in Sources */,
 				5ECEB4E6228582E2005C73ED /* AttributePokemonTVC.swift in Sources */,
+				5ECEB4F72285D67C005C73ED /* CatchedDetailView.swift in Sources */,
 				5E34234122831A1300D7DF2A /* AppDelegate.swift in Sources */,
 				5E8F941A2284968F002990E7 /* ConcurrentOperation.swift in Sources */,
 				5E34237A22831FD600D7DF2A /* APIManager.swift in Sources */,
@@ -841,6 +899,7 @@
 				5E34239A22836A9700D7DF2A /* DBManager.swift in Sources */,
 				5E8F94162284966F002990E7 /* StartUpAppSequencer.swift in Sources */,
 				5E8F941B2284968F002990E7 /* PresentMainAppOperation.swift in Sources */,
+				5ECEB4EF2285C9FC005C73ED /* CatchedPokemonCVC.swift in Sources */,
 				5E34237922831FD600D7DF2A /* ResponseCodeAPI.swift in Sources */,
 				5ECEB4E422857FBD005C73ED /* CatchActionView.swift in Sources */,
 				5E34239F22836DBA00D7DF2A /* PokemonDb.swift in Sources */,
@@ -850,9 +909,12 @@
 				5E8F94652284DB43002990E7 /* CatchPokemonPresenter.swift in Sources */,
 				5E8F94342284A6C3002990E7 /* CatchedListPresenter.swift in Sources */,
 				5ECEB4E222857E7B005C73ED /* PokemonDetailView.swift in Sources */,
+				5ECEB4EA2285BDEA005C73ED /* CatchListViewModel.swift in Sources */,
 				5E8F94382284ABB3002990E7 /* SearchPokemonViewModel.swift in Sources */,
+				5ECEB4F22285D4F4005C73ED /* CatchedDetailPresenter.swift in Sources */,
 				5E34238C2283489E00D7DF2A /* TypeAPI.swift in Sources */,
 				5E34238A2283440E00D7DF2A /* TypesAPI.swift in Sources */,
+				5ECEB4F42285D5E1005C73ED /* CatchedDetailViewModel.swift in Sources */,
 				5E34236622831E7C00D7DF2A /* R.generated.swift in Sources */,
 				5E8F942922849975002990E7 /* SearchPokemonPresenter.swift in Sources */,
 				5E34237822831FD600D7DF2A /* APIRestClient.swift in Sources */,
@@ -866,6 +928,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E34239622835A2500D7DF2A /* UTDataManager.swift in Sources */,
+				5ECEB4FA2285DD46005C73ED /* UTCatchListViewModel.swift in Sources */,
+				5ECEB4FC2285E21C005C73ED /* UTCatchedDetailModelView.swift in Sources */,
 				5E8F9469228540D2002990E7 /* UTCatchPokemonViewModel.swift in Sources */,
 				5E342386228337B000D7DF2A /* MockAPIRestClientNoConnection.swift in Sources */,
 				5E3423822283208D00D7DF2A /* UTAPIManager.swift in Sources */,

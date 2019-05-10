@@ -12,6 +12,7 @@ enum DataManagerResponse {
     case fetchedPokemon(Pokemon)
     case existsPokemon(Bool)
     case addedToBackpack
+    case backpackList([Pokemon])
     case pokemonNotFound
     case networkError
 
@@ -26,6 +27,12 @@ enum DataManagerResponse {
 final class DataManager {
 
     static let shared:DataManager = DataManager()
+
+    // MARK: - Constants
+    struct NotificationId {
+        static let deletedPerson = "DataManager.deletedPerson"
+        static let updatedPerson = "DataManager.updatedPerson"
+    }
 
     // MARK: - Injected attributes
     private var injectedAPIManager:APIManager = APIManager()
@@ -54,8 +61,16 @@ final class DataManager {
 
     func addToBackpack(pokemon:Pokemon, onComplete: (DataManagerResponse) -> ()) {
         injectedDBManager.create(pokemon: pokemon, completion: {
+            let notificationCenter = NotificationCenter.default
+            notificationCenter.post(name: NSNotification.Name(rawValue: DataManager.NotificationId.deletedPerson),
+                                    object: nil)
             onComplete(.addedToBackpack)
         })
+    }
+
+    func getBackpack(onComplete: (DataManagerResponse) -> ()) {
+
+        onComplete(.backpackList(injectedDBManager.getCatchedPockemons()))
     }
 }
 

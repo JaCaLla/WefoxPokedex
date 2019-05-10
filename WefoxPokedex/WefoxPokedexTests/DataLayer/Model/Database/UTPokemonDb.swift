@@ -35,6 +35,18 @@ class UTPokemonDb: XCTestCase {
         XCTAssertEqual(pokemonDb.baseExperience, 55)
         XCTAssertTrue( NSDate().timeIntervalSince1970 - pokemonDb.catched < 0.01 )
         XCTAssertEqual(pokemonDb.types, "uno,dos")
+
+
+        let pokemon2 = Pokemon(pokemonDb: pokemonDb)
+        XCTAssertEqual(pokemon2.idRest, 666)
+        XCTAssertEqual(pokemon2.name, "patata")
+        XCTAssertEqual(pokemon2.order, 8)
+        XCTAssertEqual(pokemon2.weight, 88)
+        XCTAssertEqual(pokemon2.height, 77)
+        XCTAssertEqual(pokemon2.frontDefaultUrlStr, "https://ss")
+        XCTAssertEqual(pokemon2.baseExperience, 55)
+        XCTAssertTrue( NSDate().timeIntervalSince1970 - pokemonDb.catched < 1 )
+        XCTAssertEqual(pokemon2.types, ["uno","dos"])
     }
 
 

@@ -10,27 +10,63 @@ import UIKit
 
 class CatchedListPresenter: UIViewController {
 
+    // MARK: - IBOutlet
+    @IBOutlet weak var catchedListView: CatchedListView!
+
+    // MARK: - Callbacks
+    var onSelected: (Pokemon) -> Void = { _ in /* Default empty block */}
+
     // MARK: - Constructor/Initializer
-    static func instantiate() -> CatchedListPresenter {
+    static func instantiate(catchListViewModel:CatchListViewModel = CatchListViewModel()) -> CatchedListPresenter {
         let catchedListPresenter = CatchedListPresenter.instantiate(fromAppStoryboard: .backpack)
+        catchedListPresenter.injectedCatchListViewModel = catchListViewModel
         return catchedListPresenter
     }
 
+
+    // MARK: - Privvate attributes
+    private var injectedCatchListViewModel:CatchListViewModel = CatchListViewModel()
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupPresenter()
+    }
 
-        // Do any additional setup after loading the view.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        injectedCatchListViewModel.start()
+    }
+
+    // MARK: - Private/Internal
+    private func setupPresenter() {
+
+        injectedCatchListViewModel.onStateChanged = { [weak self] newViewModelState in
+            guard let weakSelf = self else { return }
+            weakSelf.refreshView(catchListViewModelState: newViewModelState)
+        }
+        injectedCatchListViewModel.start()
+
+        catchedListView.onSelected = onSelected
+    }
+
+    private func refreshView(catchListViewModelState:CatchListViewModelState) {
+        switch catchListViewModelState {
+        case .fetching: refreshViewFetching()
+        case .fetched(let pokemons): refreshViewFetched(pokemons:pokemons)
+        case .fetchedNotFound: refreshViewFetchedNotFound()
+        }
     }
     
+    func refreshViewFetching() {
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
+    func refreshViewFetched(pokemons:[Pokemon]) {
+        catchedListView.set(pokemons: pokemons)
+    }
+
+    func refreshViewFetchedNotFound() {
+
+    }
 }

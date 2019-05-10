@@ -67,6 +67,7 @@ struct Pokemon {
                   weight: pokemonDb.weight,
                   height: pokemonDb.height,
                   frontDefaultUrlStr: pokemonDb.frontDefaultUrlStr,
+                  catched: pokemonDb.catched,
                   baseExperience: pokemonDb.baseExperience,
                   types: pokemonDb.types.components(separatedBy: ",").compactMap { String($0) } )
     }

@@ -19,7 +19,7 @@ class PokemonDb: Object {
     @objc dynamic var frontDefaultUrlStr: String = ""
     @objc dynamic var catched:Double = NSDate().timeIntervalSince1970
     @objc dynamic var baseExperience:Int  = -1
-    dynamic var types: String = ""
+    @objc dynamic var types: String = ""
 
     var pokemon:Pokemon {
         get {

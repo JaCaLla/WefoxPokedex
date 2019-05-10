@@ -151,4 +151,68 @@ class UTDataManager: XCTestCase {
 
         self.waitForExpectations(timeout: self.timeout, handler: nil)
     }
+
+    func test_getBackpack() {
+        let asyncExpectation = expectation(description: "\(#function)")
+
+        let pokemon = Pokemon(idRest: 3, name: "patata", order: 3, weight: 88, height: 77, frontDefaultUrlStr: "https://ss",baseExperience:55, types: ["uno","dos"])
+
+        DataManager.shared.addToBackpack(pokemon: pokemon, onComplete: { dataManagerResponse in
+            switch dataManagerResponse {
+            case .addedToBackpack:
+
+                let pokemon = Pokemon(idRest: 1, name: "patata", order: 1, weight: 88, height: 77, frontDefaultUrlStr: "https://ss",baseExperience:55, types: ["uno","dos"])
+
+                DataManager.shared.addToBackpack(pokemon: pokemon, onComplete: { dataManagerResponse in
+                    switch dataManagerResponse {
+                    case .addedToBackpack:
+                        let pokemon = Pokemon(idRest: 2, name: "patata", order: 2, weight: 88, height: 77, frontDefaultUrlStr: "https://ss",baseExperience:55, types: ["uno","dos"])
+
+                        DataManager.shared.addToBackpack(pokemon: pokemon, onComplete: { dataManagerResponse in
+                            switch dataManagerResponse {
+                            case .addedToBackpack:
+                                DataManager.shared.getBackpack(onComplete: { dataManagerResponse in
+                                    switch dataManagerResponse {
+                                    case .backpackList(let pokemons):
+                                        guard pokemons.count == 3 else {
+                                            XCTFail()
+                                            asyncExpectation.fulfill()
+                                            return
+                                        }
+                                        XCTAssertEqual(pokemons[0].order, 1)
+                                        XCTAssertEqual(pokemons[1].order, 2)
+                                        XCTAssertEqual(pokemons[2].order, 3)
+                                        asyncExpectation.fulfill()
+                                    default :
+                                        XCTFail()
+                                        asyncExpectation.fulfill()
+                                    }
+                                    })
+                            default:
+                                asyncExpectation.fulfill()
+                                XCTFail()
+                            }
+                        })
+
+                    default:
+                        asyncExpectation.fulfill()
+                        XCTFail()
+                    }
+                })
+
+            default:
+                asyncExpectation.fulfill()
+                XCTFail()
+            }
+        })
+
+
+        self.waitForExpectations(timeout: self.timeout, handler: nil)
+    }
+
+/*
+    func getBackpack(onComplete: (DataManagerResponse) -> ()) {
+
+        onComplete(.backpackList(injectedDBManager.getCatchedPockemons()))
+    }*/
 }
