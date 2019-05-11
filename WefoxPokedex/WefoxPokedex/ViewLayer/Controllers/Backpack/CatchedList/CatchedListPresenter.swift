@@ -44,8 +44,10 @@ class CatchedListPresenter: UIViewController {
         self.view.backgroundColor = AppColors.CatchedDetail.background
         
         injectedCatchListViewModel.onStateChanged = { [weak self] newViewModelState in
-            guard let weakSelf = self else { return }
-            weakSelf.refreshView(catchListViewModelState: newViewModelState)
+            DispatchQueue.main.async {
+                guard let weakSelf = self else { return }
+                weakSelf.refreshView(catchListViewModelState: newViewModelState)
+            }
         }
         injectedCatchListViewModel.start()
 

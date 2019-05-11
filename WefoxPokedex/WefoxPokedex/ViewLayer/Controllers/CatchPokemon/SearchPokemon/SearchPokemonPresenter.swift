@@ -52,8 +52,10 @@ class SearchPokemonPresenter: UIViewController {
         injectedSearchPokemonViewModel.start()
 
         inputCodeView.onCodeEntered = { [weak self] in
-            guard let weakSelf = self else { return }
-            weakSelf.injectedSearchPokemonViewModel.getPokemon()
+            DispatchQueue.main.async {
+                guard let weakSelf = self else { return }
+                weakSelf.injectedSearchPokemonViewModel.getPokemon()
+            }
         }
         activityIndicator.style = .gray
     }

@@ -44,8 +44,10 @@ class CatchPokemonPresenter: UIViewController {
         self.view.backgroundColor = AppColors.SearchPokemon.background
 
         injectedCatchPokemonViewModel.onStateChanged = { [weak self] newViewModelState in
-            guard let weakSelf = self else { return }
-            weakSelf.refreshView(catchPokemonViewModelState: newViewModelState)
+            DispatchQueue.main.async {
+                guard let weakSelf = self else { return }
+                weakSelf.refreshView(catchPokemonViewModelState: newViewModelState)
+            }
         }
         injectedCatchPokemonViewModel.start()
 

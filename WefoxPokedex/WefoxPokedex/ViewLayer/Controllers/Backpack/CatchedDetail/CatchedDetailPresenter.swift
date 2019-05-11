@@ -36,8 +36,10 @@ class CatchedDetailPresenter: UIViewController {
         self.view.backgroundColor = AppColors.CatchedDetail.background
 
         injectedCatchedDetailModelView.onStateChanged = { [weak self] newViewModelState in
-            guard let weakSelf = self else { return }
-            weakSelf.refreshView(catchedDetailViewModelState: newViewModelState)
+            DispatchQueue.main.async {
+                guard let weakSelf = self else { return }
+                weakSelf.refreshView(catchedDetailViewModelState: newViewModelState)
+            }
         }
         injectedCatchedDetailModelView.start()
     }
