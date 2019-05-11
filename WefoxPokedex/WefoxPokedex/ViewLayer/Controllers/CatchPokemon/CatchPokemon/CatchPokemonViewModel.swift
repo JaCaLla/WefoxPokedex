@@ -26,11 +26,7 @@ enum CatchPokemonViewModelState: RawRepresentable,Equatable {
     }
 
     init?(rawValue: RawValue) {
-        switch rawValue {
-        case ViewModelStateValue.checkingCatched,
-             ViewModelStateValue.checkedCatched: return nil
-        default: return nil
-        }
+        return nil
     }
 
     var rawValue: RawValue {

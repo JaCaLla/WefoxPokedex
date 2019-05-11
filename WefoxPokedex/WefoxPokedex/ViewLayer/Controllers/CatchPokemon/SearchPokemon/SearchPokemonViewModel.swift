@@ -70,7 +70,7 @@ class SearchPokemonViewModel {
         onStateChanged(.idle)
     }
 
-    func getPokemon(id:String) {
+    func getPokemon(id:Int? = nil) {
         onStateChanged(.fetching)
         injectedCatchUseCase.getPokemon(id: id, onComplete: { [weak self] dataManagerResponse in
             guard let weakSelf = self else { return }

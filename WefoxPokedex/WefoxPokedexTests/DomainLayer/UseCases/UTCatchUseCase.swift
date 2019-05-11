@@ -21,27 +21,11 @@ class UTCatchUseCase: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_getPokemonInvalidInt() {
-        
-        let asyncExpectation = expectation(description: "\(#function)")
-
-        CatchUseCase().getPokemon(id: "1o", onComplete: { dataManagerResponse in
-            switch dataManagerResponse {
-            case .pokemonNotFound:
-                asyncExpectation.fulfill()
-            default:
-                XCTFail()
-                asyncExpectation.fulfill()
-            }
-        })
-        self.waitForExpectations(timeout: self.timeout, handler: nil)
-    }
-
     func test_getPokemon() {
 
         let asyncExpectation = expectation(description: "\(#function)")
 
-        CatchUseCase().getPokemon(id: "10", onComplete: { dataManagerResponse in
+        CatchUseCase().getPokemon(id: 10, onComplete: { dataManagerResponse in
             switch dataManagerResponse {
             case .fetchedPokemon(let pokemon):
                 XCTAssertEqual(pokemon.idRest, 10)

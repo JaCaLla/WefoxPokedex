@@ -22,7 +22,6 @@ enum CatchedDetailViewModelState: RawRepresentable,Equatable {
 
     init?(rawValue: RawValue) {
         switch rawValue {
-        case ViewModelStateValue.checkingCatched: return nil
         default: return nil
         }
     }

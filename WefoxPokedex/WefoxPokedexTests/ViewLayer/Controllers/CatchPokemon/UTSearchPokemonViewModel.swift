@@ -80,7 +80,7 @@ class UTSearchPokemonViewModel: XCTestCase {
             }
         }
         searchPokemonViewModel.start()
-        searchPokemonViewModel.getPokemon(id: "5")
+        searchPokemonViewModel.getPokemon(id: 5)
 
         self.waitForExpectations(timeout:10, handler: nil)
     }
@@ -112,7 +112,7 @@ class UTSearchPokemonViewModel: XCTestCase {
             }
         }
         searchPokemonViewModel.start()
-        searchPokemonViewModel.getPokemon(id: "123456789")
+        searchPokemonViewModel.getPokemon(id: 123456789)
 
         self.waitForExpectations(timeout:10, handler: nil)
     }

@@ -16,7 +16,7 @@ class InputCodeView: UIView {
     @IBOutlet weak var btnSearch: UIButton!
 
     // MARK: - Callbacks
-    var onCodeEntered: (String) -> Void = { _ in /* Default empty block */}
+    var onCodeEntered: ( ) -> Void = { /* Default empty block */}
 
     //MARK: - Lifecycle
     override func awakeFromNib() {
@@ -32,10 +32,8 @@ class InputCodeView: UIView {
         lblTitle.font = AppFonts.SearchPokemon.emailFont
         lblTitle.textColor = AppColors.SearchPokemon.titleFontColor
         lblTitle.text = R.string.localizable.search_pokemon_label.key.localized
-
-        txtCode.font = AppFonts.SearchPokemon.emailFont
-        txtCode.textColor = AppColors.SearchPokemon.textInputColor
-        txtCode.keyboardType = .numberPad
+        lblTitle.numberOfLines = 2
+        lblTitle.textAlignment = .center
 
         btnSearch.titleLabel?.font        = AppFonts.SearchPokemon.buttonFont
         btnSearch.titleLabel?.textColor   = AppColors.SearchPokemon.fontColor
@@ -48,10 +46,6 @@ class InputCodeView: UIView {
 
     // MARK: - Target methods
     @objc func onActionButton(sender: UIButton!) {
-        guard let text = txtCode.text,
-            text.count > 0 else { return }
-        txtCode.text = ""
-        txtCode.endEditing(true)
-        onCodeEntered(text)
+        onCodeEntered()
     }
 }

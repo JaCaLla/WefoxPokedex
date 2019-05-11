@@ -17,9 +17,10 @@ enum DataManagerResponse {
     case networkError
 
     init(responseCodeAPI:ResponseCodeAPI) {
-        switch responseCodeAPI {
-        case .responseValidationFailed: self = .pokemonNotFound
-        default:                        self = .networkError
+        if responseCodeAPI == .responseValidationFailed {
+            self = .pokemonNotFound
+        } else {
+            self = .networkError
         }
     }
 }

@@ -17,14 +17,13 @@ class CatchUseCase:NSObject {
         self.injectedDataManager = dataManager
     }
 
-
     // MARK: - Public helpers
-    func getPokemon(id:String, onComplete: @escaping (DataManagerResponse) -> ()) {
-        guard let uwpId = Int(id) else {
-            onComplete(DataManagerResponse.pokemonNotFound)
-            return
+    func getPokemon(id:Int? = nil ,onComplete: @escaping (DataManagerResponse) -> ()) {
+        var randomId = Int.random(in: 0 ... 1000)
+        if let uwpTestId = id {
+            randomId = uwpTestId
         }
-        self.injectedDataManager.getPokemon(id: uwpId, onComplete: onComplete)
+        self.injectedDataManager.getPokemon(id: randomId, onComplete: onComplete)
     }
 
     func exists(pokemon:Pokemon, onComplete: (DataManagerResponse) -> ()) {

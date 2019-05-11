@@ -25,6 +25,7 @@ enum RealmConfig {
         // Set the block which will be called automatically when opening a Realm with
         // a schema version lower than the one set above
         migrationBlock: { _, _ in
+            // All migration code will be placed here
         }
     )
 

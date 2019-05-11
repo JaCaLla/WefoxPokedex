@@ -96,7 +96,7 @@ class CatchedDetailView: UITableView {
     // MARK: - Public helpers
     func set(pokemon:Pokemon) {
         self.pokemon = pokemon
-        self.reloadData()
+        self.refreshView()
     }
 
     // MARK: - Internal/Private

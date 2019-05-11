@@ -137,8 +137,6 @@ struct R: Rswift.Validatable {
       static let catch_pokemon_button_leave = Rswift.StringResource(key: "catch_pokemon_button_leave", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: < Back
       static let person_detail_back = Rswift.StringResource(key: "person_detail_back", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Alert
-      static let search_pokemon_alert_title = Rswift.StringResource(key: "search_pokemon_alert_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Backpack
       static let tab_backpack = Rswift.StringResource(key: "tab_backpack", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Base experience
@@ -171,6 +169,8 @@ struct R: Rswift.Validatable {
       static let catch_pokemon_attribute_height = Rswift.StringResource(key: "catch_pokemon_attribute_height", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Name
       static let catch_pokemon_attribute_name = Rswift.StringResource(key: "catch_pokemon_attribute_name", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: No Pokemon Found!
+      static let search_pokemon_alert_title = Rswift.StringResource(key: "search_pokemon_alert_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Not catched yet!!!
       static let catch_pokemon_value_catched_not_catched = Rswift.StringResource(key: "catch_pokemon_value_catched_not_catched", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Ok
@@ -185,11 +185,11 @@ struct R: Rswift.Validatable {
       static let search_pokemon_title = Rswift.StringResource(key: "search_pokemon_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Pokemon Detail
       static let catch_pokemon_title = Rswift.StringResource(key: "catch_pokemon_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Pokemon code not found try a lower number...
-      static let search_pokemon_alert_message = Rswift.StringResource(key: "search_pokemon_alert_message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Try a Pokemon numeric code:
+      /// Value: Press the button for trying to fetch a random Pokemon
       static let search_pokemon_label = Rswift.StringResource(key: "search_pokemon_label", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Try for luck!
+      /// Value: Try it again
+      static let search_pokemon_alert_message = Rswift.StringResource(key: "search_pokemon_alert_message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Try!
       static let search_pokemon_button_title = Rswift.StringResource(key: "search_pokemon_button_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Types
       static let catch_pokemon_attribute_types = Rswift.StringResource(key: "catch_pokemon_attribute_types", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -212,11 +212,6 @@ struct R: Rswift.Validatable {
       /// Value: < Back
       static func person_detail_back(_: Void = ()) -> String {
         return NSLocalizedString("person_detail_back", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Alert
-      static func search_pokemon_alert_title(_: Void = ()) -> String {
-        return NSLocalizedString("search_pokemon_alert_title", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: Backpack
@@ -299,6 +294,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("catch_pokemon_attribute_name", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: No Pokemon Found!
+      static func search_pokemon_alert_title(_: Void = ()) -> String {
+        return NSLocalizedString("search_pokemon_alert_title", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: Not catched yet!!!
       static func catch_pokemon_value_catched_not_catched(_: Void = ()) -> String {
         return NSLocalizedString("catch_pokemon_value_catched_not_catched", bundle: R.hostingBundle, comment: "")
@@ -334,17 +334,17 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("catch_pokemon_title", bundle: R.hostingBundle, comment: "")
       }
       
-      /// Value: Pokemon code not found try a lower number...
-      static func search_pokemon_alert_message(_: Void = ()) -> String {
-        return NSLocalizedString("search_pokemon_alert_message", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Try a Pokemon numeric code:
+      /// Value: Press the button for trying to fetch a random Pokemon
       static func search_pokemon_label(_: Void = ()) -> String {
         return NSLocalizedString("search_pokemon_label", bundle: R.hostingBundle, comment: "")
       }
       
-      /// Value: Try for luck!
+      /// Value: Try it again
+      static func search_pokemon_alert_message(_: Void = ()) -> String {
+        return NSLocalizedString("search_pokemon_alert_message", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Try!
       static func search_pokemon_button_title(_: Void = ()) -> String {
         return NSLocalizedString("search_pokemon_button_title", bundle: R.hostingBundle, comment: "")
       }

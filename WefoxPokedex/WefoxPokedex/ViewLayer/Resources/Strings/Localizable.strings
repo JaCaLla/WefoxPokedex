@@ -2,10 +2,10 @@
 "tab_backpack" = "Backpack";
 
 "search_pokemon_title" = "PokedexTest";
-"search_pokemon_label" = "Try a Pokemon numeric code:";
-"search_pokemon_button_title" = "Try for luck!";
-"search_pokemon_alert_title" = "Alert";
-"search_pokemon_alert_message" = "Pokemon code not found try a lower number...";
+"search_pokemon_label" = "Press the button for trying to fetch a random Pokemon";
+"search_pokemon_button_title" = "Try!";
+"search_pokemon_alert_title" = "No Pokemon Found!";
+"search_pokemon_alert_message" = "Try it again";
 "search_pokemon_alert_button" = "Ok";
 
 "catch_pokemon_title" = "Pokemon Detail";
